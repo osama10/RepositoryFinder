@@ -29,6 +29,7 @@ class RepoListViewController: UIViewController {
     
     private func setupTableView(){
         self.tableView.register(RepoListTableViewCell.self)
+        self.tableView.register(ShowMoreTableViewCell.self)
         self.tableView.setdelegateAndDatasource(for: self)
         self.tableView.estimatedRowHeight = 200
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -43,6 +44,7 @@ class RepoListViewController: UIViewController {
         searchViewContainerView.addSubview(searchView)
     }
     
+ 
 }
 
 extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
@@ -51,10 +53,20 @@ extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeResuseableCell(for: indexPath) as RepoListTableViewCell
+        var cell : UITableViewCell!
+     
+        if(indexPath.row == 4){
+            let _cell = tableView.dequeResuseableCell(for: indexPath) as ShowMoreTableViewCell
+            cell = _cell
+        }else {
+            let _cell = tableView.dequeResuseableCell(for: indexPath) as RepoListTableViewCell
+            cell = _cell
+        }
+        
         return cell
     }
     
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }

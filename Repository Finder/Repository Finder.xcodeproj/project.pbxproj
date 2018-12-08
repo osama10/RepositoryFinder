@@ -37,6 +37,11 @@
 		4AC16C0021BC11C40012B89B /* RepoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16BFE21BC11C40012B89B /* RepoListTableViewCell.swift */; };
 		4AC16C0121BC11C40012B89B /* RepoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16BFF21BC11C40012B89B /* RepoListTableViewCell.xib */; };
 		4AC16C0321BC1A950012B89B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C0221BC1A950012B89B /* Utils.swift */; };
+		4AC16C0B21BC24E60012B89B /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */; };
+		4AC16C0C21BC24E60012B89B /* ShowMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */; };
+		4AC16C1121BC2B4D0012B89B /* ForkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C1021BC2B4D0012B89B /* ForkListViewController.swift */; };
+		4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C1221BC2BE10012B89B /* ForkListTableViewCell.swift */; };
+		4AC16C1521BC2BE10012B89B /* ForkListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16C1321BC2BE10012B89B /* ForkListTableViewCell.xib */; };
 		9F77C99F3A0FB3FBEC0EE5EF /* Pods_Repository_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5D9D4E929B450F8E15D4A /* Pods_Repository_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		4AC16BFE21BC11C40012B89B /* RepoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListTableViewCell.swift; sourceTree = "<group>"; };
 		4AC16BFF21BC11C40012B89B /* RepoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListTableViewCell.xib; sourceTree = "<group>"; };
 		4AC16C0221BC1A950012B89B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
+		4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowMoreTableViewCell.xib; sourceTree = "<group>"; };
+		4AC16C1021BC2B4D0012B89B /* ForkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListViewController.swift; sourceTree = "<group>"; };
+		4AC16C1221BC2BE10012B89B /* ForkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListTableViewCell.swift; sourceTree = "<group>"; };
+		4AC16C1321BC2BE10012B89B /* ForkListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForkListTableViewCell.xib; sourceTree = "<group>"; };
 		84BACBDA5A798EA8C6100348 /* Pods-Repository Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C5D9D4E929B450F8E15D4A /* Pods_Repository_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repository_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,8 +150,9 @@
 		4AC16B5A21BB8A360012B89B /* Repository Finder */ = {
 			isa = PBXGroup;
 			children = (
+				4AC16C0621BC24100012B89B /* Modules */,
+				4AC16C0521BC24020012B89B /* Services */,
 				4AC16BFB21BC10500012B89B /* CustomViews */,
-				4AC16BF321BC08E80012B89B /* RepoList */,
 				4AC16BF221BC08BD0012B89B /* Protocols */,
 				4AC16BA121BB97410012B89B /* Extensions */,
 				4AC16B8321BB8DFD0012B89B /* Networking */,
@@ -271,18 +282,18 @@
 		4AC16BF321BC08E80012B89B /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				4AC16BF421BC09130012B89B /* View */,
+				4AC16BF421BC09130012B89B /* Views */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
 		};
-		4AC16BF421BC09130012B89B /* View */ = {
+		4AC16BF421BC09130012B89B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4AC16BF621BC09210012B89B /* Views */,
 				4AC16BF521BC09190012B89B /* ViewControllers */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4AC16BF521BC09190012B89B /* ViewControllers */ = {
@@ -306,6 +317,8 @@
 			children = (
 				4AC16BF721BC09CA0012B89B /* SearchView.xib */,
 				4AC16BF921BC0A480012B89B /* SearchView.swift */,
+				4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */,
+				4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -317,6 +330,56 @@
 				4AC16BFF21BC11C40012B89B /* RepoListTableViewCell.xib */,
 			);
 			path = RepoListView;
+			sourceTree = "<group>";
+		};
+		4AC16C0521BC24020012B89B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4AC16C0621BC24100012B89B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C0721BC24430012B89B /* ForksList */,
+				4AC16BF321BC08E80012B89B /* RepoList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4AC16C0721BC24430012B89B /* ForksList */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C0821BC245F0012B89B /* Views */,
+			);
+			path = ForksList;
+			sourceTree = "<group>";
+		};
+		4AC16C0821BC245F0012B89B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C0F21BC2B260012B89B /* Views */,
+				4AC16C0E21BC2B1C0012B89B /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AC16C0E21BC2B1C0012B89B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C1021BC2B4D0012B89B /* ForkListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4AC16C0F21BC2B260012B89B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C1221BC2BE10012B89B /* ForkListTableViewCell.swift */,
+				4AC16C1321BC2BE10012B89B /* ForkListTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		99045C1F132FF1D0292118DF /* Pods */ = {
@@ -412,8 +475,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC16BF821BC09CA0012B89B /* SearchView.xib in Resources */,
+				4AC16C0C21BC24E60012B89B /* ShowMoreTableViewCell.xib in Resources */,
 				4AC16C0121BC11C40012B89B /* RepoListTableViewCell.xib in Resources */,
 				4AC16B6621BB8A390012B89B /* LaunchScreen.storyboard in Resources */,
+				4AC16C1521BC2BE10012B89B /* ForkListTableViewCell.xib in Resources */,
 				4AC16B6321BB8A390012B89B /* Assets.xcassets in Resources */,
 				4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */,
 			);
@@ -478,6 +543,7 @@
 				4AC16B8821BB8E5F0012B89B /* EmptyDTO.swift in Sources */,
 				4AC16B9121BB8F140012B89B /* BaseURL.swift in Sources */,
 				4AC16BA321BB97580012B89B /* Protocols.swift in Sources */,
+				4AC16C1121BC2B4D0012B89B /* ForkListViewController.swift in Sources */,
 				4AC16BAA21BB99F80012B89B /* BaseURL+RepositoryFinder.swift in Sources */,
 				4AC16BA821BB99A30012B89B /* API+RepositoryFinder.swift in Sources */,
 				4AC16B8221BB8DB10012B89B /* Singleton.swift in Sources */,
@@ -491,10 +557,12 @@
 				4AC16B8F21BB8EE80012B89B /* API.swift in Sources */,
 				4AC16B9721BB8FAB0012B89B /* RequestError.swift in Sources */,
 				4AC16B9521BB8F7B0012B89B /* NetworkError.swift in Sources */,
+				4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */,
 				4AC16B9E21BB91790012B89B /* AlamofireManager.swift in Sources */,
 				4AC16B8621BB8E3A0012B89B /* DTO.swift in Sources */,
 				4AC16BA021BB97170012B89B /* Extensions.swift in Sources */,
 				4AC16C0021BC11C40012B89B /* RepoListTableViewCell.swift in Sources */,
+				4AC16C0B21BC24E60012B89B /* ShowMoreTableViewCell.swift in Sources */,
 				4AC16B9321BB8F5E0012B89B /* Result.swift in Sources */,
 				4AC16B9921BB8FD40012B89B /* NetworkResult.swift in Sources */,
 				4AC16C0321BC1A950012B89B /* Utils.swift in Sources */,
