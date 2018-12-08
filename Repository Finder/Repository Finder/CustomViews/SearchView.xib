@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchView" customModule="Repository_Finder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the reposiotry name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-cd-qN9">
+                    <rect key="frame" x="12" y="0.0" width="367" height="120"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-Cu-SON">
+                    <rect key="frame" x="379" y="0.0" width="95" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapOnSearchButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ufq-nU-mQZ"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-uy-2DB">
+                    <rect key="frame" x="0.0" y="120" width="474" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5GF-yg-BE2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lY3-uy-2DB" firstAttribute="top" secondItem="Kh0-cd-qN9" secondAttribute="bottom" id="4H0-MP-khS"/>
+                <constraint firstItem="tWb-Cu-SON" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7O9-wh-yag"/>
+                <constraint firstItem="Kh0-cd-qN9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7Rv-Da-5LT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lY3-uy-2DB" secondAttribute="trailing" id="BZH-9X-2D1"/>
+                <constraint firstItem="lY3-uy-2DB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JVx-WK-nx2"/>
+                <constraint firstItem="tWb-Cu-SON" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="P2Y-wj-IFC"/>
+                <constraint firstItem="Kh0-cd-qN9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="VZz-Zz-idu"/>
+                <constraint firstItem="lY3-uy-2DB" firstAttribute="top" secondItem="tWb-Cu-SON" secondAttribute="bottom" id="cQe-b0-bPB"/>
+                <constraint firstItem="tWb-Cu-SON" firstAttribute="leading" secondItem="Kh0-cd-qN9" secondAttribute="trailing" id="dXb-uL-NGI"/>
+                <constraint firstItem="lY3-uy-2DB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="je9-U9-2Ih"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tWb-Cu-SON" secondAttribute="trailing" id="vI3-kN-dC0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="searchButton" destination="tWb-Cu-SON" id="5cA-NB-ksW"/>
+                <outlet property="searchTextField" destination="Kh0-cd-qN9" id="Ap9-x0-hzw"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="-1.5"/>
+        </view>
+    </objects>
+</document>
