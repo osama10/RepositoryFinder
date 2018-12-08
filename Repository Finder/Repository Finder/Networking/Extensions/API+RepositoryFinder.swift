@@ -10,5 +10,5 @@ import Foundation
 
 let apiVersion = "api/v0"
 extension API {
-    
+    static let repositories = API(baseURL: .baseURL, path: ["search", "repositories"])
 }

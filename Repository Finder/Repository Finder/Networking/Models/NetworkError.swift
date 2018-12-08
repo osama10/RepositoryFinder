@@ -9,8 +9,8 @@
 import Foundation
 
 public enum NetworkError: Error {
-    case requestCreation
-    case decoding(Data?, Error?)
-    case server(Error?)
+    case requestCreation( String )
+    case decoding(String)
+    case server(String)
 }
 

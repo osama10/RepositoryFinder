@@ -21,14 +21,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kLV-sd-hpb">
-                        <rect key="frame" x="12" y="16" width="40" height="40"/>
+                        <rect key="frame" x="12" y="11" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="AOy-ys-tbN"/>
-                            <constraint firstAttribute="width" constant="40" id="jwK-uo-L4r"/>
+                            <constraint firstAttribute="height" constant="50" id="AOy-ys-tbN"/>
+                            <constraint firstAttribute="width" constant="50" id="jwK-uo-L4r"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osama" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-Fg-Nha">
-                        <rect key="frame" x="64" y="26.5" width="292" height="20.5"/>
+                        <rect key="frame" x="74" y="26.5" width="282" height="20.5"/>
                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NothingFoundView" customModule="Repository_Finder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="189"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nothing-found" translatesAutoresizingMaskIntoConstraints="NO" id="lhG-P1-dog">
+                    <rect key="frame" x="20" y="44.5" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="QXp-bO-XQT"/>
+                        <constraint firstAttribute="height" constant="100" id="Sox-dj-e5a"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Found ...!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1H-pa-qUP">
+                    <rect key="frame" x="140" y="81" width="174" height="27.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lhG-P1-dog" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Xgz-yl-nnU"/>
+                <constraint firstItem="lhG-P1-dog" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fHC-jV-hhI"/>
+                <constraint firstItem="K1H-pa-qUP" firstAttribute="centerY" secondItem="lhG-P1-dog" secondAttribute="centerY" id="lHI-MH-vX0"/>
+                <constraint firstItem="K1H-pa-qUP" firstAttribute="leading" secondItem="lhG-P1-dog" secondAttribute="trailing" constant="20" id="tAm-M3-fh3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="13.5" y="-80.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nothing-found" width="800" height="800"/>
+    </resources>
+</document>

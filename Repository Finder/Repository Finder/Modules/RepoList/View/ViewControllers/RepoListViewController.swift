@@ -13,18 +13,42 @@ class RepoListViewController: UIViewController {
     @IBOutlet weak var searchViewContainerView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nothingFoundContainerView: UIView!
     
     weak var searchView : SearchView!
+    weak var nothingFoundView : NothingFoundView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSettings()
+        let repoRequest = RepoListRequest(queryString: "detail", pageNumber: "1", perPageElement: "30")
+        let  repoListEndpoingProvider = RepoListEndpointProvider(requestObject: repoRequest)
+        AlamofireManager.shared.request(repoListEndpoingProvider) { (result) in
+            switch result{
+            case .success(let data):
+                print(data.totalCount)
+            case .error(let error):
+                print(error.localizedDescription )
+            case .failure(let failure):
+                print(failure.error ?? "Failure")
+            }
+        }
     }
     
     private func initialSettings(){
         self.setupSearchView()
         self.setupTableView()
         self.view.backgroundColor = .backgroundColor
+        self.addNothingFoundView()
+        self.setLogo()
+    }
+    
+    private func setLogo(){
+        let image  = UIImage(named: "logo")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        navigationItem.titleView = imageView
     }
     
     private func setupTableView(){
@@ -44,7 +68,16 @@ class RepoListViewController: UIViewController {
         searchViewContainerView.addSubview(searchView)
     }
     
- 
+    private func addNothingFoundView(){
+        let width = nothingFoundContainerView.frame.width
+        let height  = nothingFoundContainerView.frame.height
+        
+        nothingFoundView = NothingFoundView.loadNib()
+        nothingFoundView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        nothingFoundContainerView.addSubview(nothingFoundView)
+    }
+    
 }
 
 extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
@@ -54,7 +87,7 @@ extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : UITableViewCell!
-     
+        
         if(indexPath.row == 4){
             let _cell = tableView.dequeResuseableCell(for: indexPath) as ShowMoreTableViewCell
             cell = _cell
@@ -66,7 +99,7 @@ extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }

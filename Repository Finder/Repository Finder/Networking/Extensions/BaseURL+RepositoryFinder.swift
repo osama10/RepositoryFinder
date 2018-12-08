@@ -8,5 +8,5 @@
 
 import Foundation
 extension BaseURL {
-    static var moyo: BaseURL = .init(scheme: "https", host: "api.github.com")
+    static var baseURL: BaseURL = .init(scheme: "https", host: "api.github.com")
 }

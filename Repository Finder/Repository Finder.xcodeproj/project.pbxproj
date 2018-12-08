@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A86F2F521BC4EA3003B6CC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F421BC4EA3003B6CC2 /* Repository.swift */; };
+		4A86F2F721BC5197003B6CC2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F621BC5197003B6CC2 /* Owner.swift */; };
+		4A86F2FC21BC5239003B6CC2 /* RepoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */; };
+		4A86F30221BC5393003B6CC2 /* RepoListEndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */; };
+		4A86F30521BC59B0003B6CC2 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30421BC59B0003B6CC2 /* RepoListResponse.swift */; };
+		4A86F30A21BC5E89003B6CC2 /* RepoListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30921BC5E89003B6CC2 /* RepoListServices.swift */; };
+		4A86F30C21BC5FDE003B6CC2 /* RepoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30B21BC5FDE003B6CC2 /* RepoResult.swift */; };
+		4A86F30E21BC601D003B6CC2 /* RepoListServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30D21BC601D003B6CC2 /* RepoListServiceImp.swift */; };
 		4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5B21BB8A360012B89B /* AppDelegate.swift */; };
 		4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */; };
 		4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B5F21BB8A360012B89B /* Main.storyboard */; };
@@ -42,6 +50,8 @@
 		4AC16C1121BC2B4D0012B89B /* ForkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C1021BC2B4D0012B89B /* ForkListViewController.swift */; };
 		4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C1221BC2BE10012B89B /* ForkListTableViewCell.swift */; };
 		4AC16C1521BC2BE10012B89B /* ForkListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16C1321BC2BE10012B89B /* ForkListTableViewCell.xib */; };
+		4AC16C1721BC37350012B89B /* NothingFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16C1621BC37350012B89B /* NothingFoundView.swift */; };
+		4AC16C1921BC37510012B89B /* NothingFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16C1821BC37510012B89B /* NothingFoundView.xib */; };
 		9F77C99F3A0FB3FBEC0EE5EF /* Pods_Repository_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5D9D4E929B450F8E15D4A /* Pods_Repository_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +67,14 @@
 
 /* Begin PBXFileReference section */
 		0757DF11F998307046B1B9B9 /* Pods-Repository Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder.release.xcconfig"; sourceTree = "<group>"; };
+		4A86F2F421BC4EA3003B6CC2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4A86F2F621BC5197003B6CC2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListRequest.swift; sourceTree = "<group>"; };
+		4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListEndpointProvider.swift; sourceTree = "<group>"; };
+		4A86F30421BC59B0003B6CC2 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
+		4A86F30921BC5E89003B6CC2 /* RepoListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListServices.swift; sourceTree = "<group>"; };
+		4A86F30B21BC5FDE003B6CC2 /* RepoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResult.swift; sourceTree = "<group>"; };
+		4A86F30D21BC601D003B6CC2 /* RepoListServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListServiceImp.swift; sourceTree = "<group>"; };
 		4AC16B5821BB8A360012B89B /* Repository Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC16B5B21BB8A360012B89B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +114,8 @@
 		4AC16C1021BC2B4D0012B89B /* ForkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListViewController.swift; sourceTree = "<group>"; };
 		4AC16C1221BC2BE10012B89B /* ForkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListTableViewCell.swift; sourceTree = "<group>"; };
 		4AC16C1321BC2BE10012B89B /* ForkListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForkListTableViewCell.xib; sourceTree = "<group>"; };
+		4AC16C1621BC37350012B89B /* NothingFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NothingFoundView.swift; sourceTree = "<group>"; };
+		4AC16C1821BC37510012B89B /* NothingFoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundView.xib; sourceTree = "<group>"; };
 		84BACBDA5A798EA8C6100348 /* Pods-Repository Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C5D9D4E929B450F8E15D4A /* Pods_Repository_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repository_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +145,75 @@
 				D8C5D9D4E929B450F8E15D4A /* Pods_Repository_Finder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A86F2F321BC4C2D003B6CC2 /* Entiity */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F2F421BC4EA3003B6CC2 /* Repository.swift */,
+				4A86F2F621BC5197003B6CC2 /* Owner.swift */,
+			);
+			path = Entiity;
+			sourceTree = "<group>";
+		};
+		4A86F2F821BC51EA003B6CC2 /* RepoListEndpointProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30321BC5897003B6CC2 /* Response */,
+				4A86F30021BC5372003B6CC2 /* EnpoindProvider */,
+				4A86F2FF21BC5369003B6CC2 /* Request */,
+			);
+			path = RepoListEndpointProvider;
+			sourceTree = "<group>";
+		};
+		4A86F2FF21BC5369003B6CC2 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4A86F30021BC5372003B6CC2 /* EnpoindProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */,
+			);
+			path = EnpoindProvider;
+			sourceTree = "<group>";
+		};
+		4A86F30321BC5897003B6CC2 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30421BC59B0003B6CC2 /* RepoListResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		4A86F30621BC5E60003B6CC2 /* RepoListServices */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30821BC5E74003B6CC2 /* Service */,
+				4A86F30721BC5E68003B6CC2 /* Contract */,
+				4A86F30B21BC5FDE003B6CC2 /* RepoResult.swift */,
+			);
+			path = RepoListServices;
+			sourceTree = "<group>";
+		};
+		4A86F30721BC5E68003B6CC2 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30921BC5E89003B6CC2 /* RepoListServices.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		4A86F30821BC5E74003B6CC2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F30D21BC601D003B6CC2 /* RepoListServiceImp.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		4AC16B4F21BB8A360012B89B = {
@@ -267,6 +356,7 @@
 		4AC16BAB21BB9A370012B89B /* EndpointProvider */ = {
 			isa = PBXGroup;
 			children = (
+				4A86F2F821BC51EA003B6CC2 /* RepoListEndpointProvider */,
 			);
 			path = EndpointProvider;
 			sourceTree = "<group>";
@@ -282,18 +372,19 @@
 		4AC16BF321BC08E80012B89B /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				4AC16BF421BC09130012B89B /* Views */,
+				4A86F2F321BC4C2D003B6CC2 /* Entiity */,
+				4AC16BF421BC09130012B89B /* View */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
 		};
-		4AC16BF421BC09130012B89B /* Views */ = {
+		4AC16BF421BC09130012B89B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4AC16BF621BC09210012B89B /* Views */,
 				4AC16BF521BC09190012B89B /* ViewControllers */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4AC16BF521BC09190012B89B /* ViewControllers */ = {
@@ -319,6 +410,8 @@
 				4AC16BF921BC0A480012B89B /* SearchView.swift */,
 				4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */,
 				4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */,
+				4AC16C1821BC37510012B89B /* NothingFoundView.xib */,
+				4AC16C1621BC37350012B89B /* NothingFoundView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -335,6 +428,7 @@
 		4AC16C0521BC24020012B89B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4A86F30621BC5E60003B6CC2 /* RepoListServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -351,18 +445,18 @@
 		4AC16C0721BC24430012B89B /* ForksList */ = {
 			isa = PBXGroup;
 			children = (
-				4AC16C0821BC245F0012B89B /* Views */,
+				4AC16C0821BC245F0012B89B /* View */,
 			);
 			path = ForksList;
 			sourceTree = "<group>";
 		};
-		4AC16C0821BC245F0012B89B /* Views */ = {
+		4AC16C0821BC245F0012B89B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4AC16C0F21BC2B260012B89B /* Views */,
 				4AC16C0E21BC2B1C0012B89B /* ViewControllers */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4AC16C0E21BC2B1C0012B89B /* ViewControllers */ = {
@@ -475,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC16BF821BC09CA0012B89B /* SearchView.xib in Resources */,
+				4AC16C1921BC37510012B89B /* NothingFoundView.xib in Resources */,
 				4AC16C0C21BC24E60012B89B /* ShowMoreTableViewCell.xib in Resources */,
 				4AC16C0121BC11C40012B89B /* RepoListTableViewCell.xib in Resources */,
 				4AC16B6621BB8A390012B89B /* LaunchScreen.storyboard in Resources */,
@@ -539,31 +634,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A86F2FC21BC5239003B6CC2 /* RepoListRequest.swift in Sources */,
 				4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */,
 				4AC16B8821BB8E5F0012B89B /* EmptyDTO.swift in Sources */,
 				4AC16B9121BB8F140012B89B /* BaseURL.swift in Sources */,
 				4AC16BA321BB97580012B89B /* Protocols.swift in Sources */,
 				4AC16C1121BC2B4D0012B89B /* ForkListViewController.swift in Sources */,
+				4AC16C1721BC37350012B89B /* NothingFoundView.swift in Sources */,
 				4AC16BAA21BB99F80012B89B /* BaseURL+RepositoryFinder.swift in Sources */,
+				4A86F2F521BC4EA3003B6CC2 /* Repository.swift in Sources */,
 				4AC16BA821BB99A30012B89B /* API+RepositoryFinder.swift in Sources */,
 				4AC16B8221BB8DB10012B89B /* Singleton.swift in Sources */,
 				4AC16B9B21BB90040012B89B /* Endpoint.swift in Sources */,
+				4A86F30E21BC601D003B6CC2 /* RepoListServiceImp.swift in Sources */,
 				4AC16BA521BB97880012B89B /* HTTPMethods.swift in Sources */,
 				4AC16B8A21BB8E7B0012B89B /* EndpointProvider.swift in Sources */,
+				4A86F2F721BC5197003B6CC2 /* Owner.swift in Sources */,
 				4AC16BFA21BC0A480012B89B /* SearchView.swift in Sources */,
 				4AC16B8C21BB8EAD0012B89B /* NetworkManager.swift in Sources */,
 				4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */,
 				4AC16B7F21BB8D5B0012B89B /* Constants.swift in Sources */,
 				4AC16B8F21BB8EE80012B89B /* API.swift in Sources */,
+				4A86F30521BC59B0003B6CC2 /* RepoListResponse.swift in Sources */,
+				4A86F30C21BC5FDE003B6CC2 /* RepoResult.swift in Sources */,
 				4AC16B9721BB8FAB0012B89B /* RequestError.swift in Sources */,
 				4AC16B9521BB8F7B0012B89B /* NetworkError.swift in Sources */,
 				4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */,
+				4A86F30221BC5393003B6CC2 /* RepoListEndpointProvider.swift in Sources */,
 				4AC16B9E21BB91790012B89B /* AlamofireManager.swift in Sources */,
 				4AC16B8621BB8E3A0012B89B /* DTO.swift in Sources */,
 				4AC16BA021BB97170012B89B /* Extensions.swift in Sources */,
 				4AC16C0021BC11C40012B89B /* RepoListTableViewCell.swift in Sources */,
 				4AC16C0B21BC24E60012B89B /* ShowMoreTableViewCell.swift in Sources */,
 				4AC16B9321BB8F5E0012B89B /* Result.swift in Sources */,
+				4A86F30A21BC5E89003B6CC2 /* RepoListServices.swift in Sources */,
 				4AC16B9921BB8FD40012B89B /* NetworkResult.swift in Sources */,
 				4AC16C0321BC1A950012B89B /* Utils.swift in Sources */,
 			);
@@ -727,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Repository Finder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -746,6 +851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Repository Finder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
