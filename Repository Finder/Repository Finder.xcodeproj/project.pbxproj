@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		4A86F2F521BC4EA3003B6CC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F421BC4EA3003B6CC2 /* Repository.swift */; };
 		4A86F2F721BC5197003B6CC2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F621BC5197003B6CC2 /* Owner.swift */; };
-		4A86F2FC21BC5239003B6CC2 /* RepoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */; };
-		4A86F30221BC5393003B6CC2 /* RepoListEndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */; };
+		4A86F2FC21BC5239003B6CC2 /* RepoListSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2FB21BC5239003B6CC2 /* RepoListSearchRequest.swift */; };
+		4A86F30221BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30121BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift */; };
 		4A86F30521BC59B0003B6CC2 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30421BC59B0003B6CC2 /* RepoListResponse.swift */; };
 		4A86F30A21BC5E89003B6CC2 /* RepoListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30921BC5E89003B6CC2 /* RepoListServices.swift */; };
 		4A86F30C21BC5FDE003B6CC2 /* RepoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30B21BC5FDE003B6CC2 /* RepoResult.swift */; };
 		4A86F30E21BC601D003B6CC2 /* RepoListServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F30D21BC601D003B6CC2 /* RepoListServiceImp.swift */; };
+		4A86F31421BCF4D9003B6CC2 /* RepoListViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31321BCF4D9003B6CC2 /* RepoListViperProtocols.swift */; };
+		4A86F31621BCFE1A003B6CC2 /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31521BCFE1A003B6CC2 /* RepoListPresenter.swift */; };
+		4A86F31821BD1316003B6CC2 /* RepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31721BD1316003B6CC2 /* RepoListInteractor.swift */; };
+		4A86F31A21BD19E2003B6CC2 /* RepoListUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31921BD19E1003B6CC2 /* RepoListUserRequest.swift */; };
+		4A86F31C21BD1A21003B6CC2 /* RepoListUserEndProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31B21BD1A21003B6CC2 /* RepoListUserEndProvider.swift */; };
+		4A86F31F21BD252A003B6CC2 /* RepoListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F31E21BD252A003B6CC2 /* RepoListDTO.swift */; };
+		4A86F32121BD2A9C003B6CC2 /* RepoListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F32021BD2A9C003B6CC2 /* RepoListType.swift */; };
 		4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5B21BB8A360012B89B /* AppDelegate.swift */; };
 		4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */; };
 		4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B5F21BB8A360012B89B /* Main.storyboard */; };
@@ -69,12 +76,19 @@
 		0757DF11F998307046B1B9B9 /* Pods-Repository Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder.release.xcconfig"; sourceTree = "<group>"; };
 		4A86F2F421BC4EA3003B6CC2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		4A86F2F621BC5197003B6CC2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListRequest.swift; sourceTree = "<group>"; };
-		4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListEndpointProvider.swift; sourceTree = "<group>"; };
+		4A86F2FB21BC5239003B6CC2 /* RepoListSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListSearchRequest.swift; sourceTree = "<group>"; };
+		4A86F30121BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListSearchEndpointProvider.swift; sourceTree = "<group>"; };
 		4A86F30421BC59B0003B6CC2 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
 		4A86F30921BC5E89003B6CC2 /* RepoListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListServices.swift; sourceTree = "<group>"; };
 		4A86F30B21BC5FDE003B6CC2 /* RepoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResult.swift; sourceTree = "<group>"; };
 		4A86F30D21BC601D003B6CC2 /* RepoListServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListServiceImp.swift; sourceTree = "<group>"; };
+		4A86F31321BCF4D9003B6CC2 /* RepoListViperProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViperProtocols.swift; sourceTree = "<group>"; };
+		4A86F31521BCFE1A003B6CC2 /* RepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
+		4A86F31721BD1316003B6CC2 /* RepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInteractor.swift; sourceTree = "<group>"; };
+		4A86F31921BD19E1003B6CC2 /* RepoListUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListUserRequest.swift; sourceTree = "<group>"; };
+		4A86F31B21BD1A21003B6CC2 /* RepoListUserEndProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListUserEndProvider.swift; sourceTree = "<group>"; };
+		4A86F31E21BD252A003B6CC2 /* RepoListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListDTO.swift; sourceTree = "<group>"; };
+		4A86F32021BD2A9C003B6CC2 /* RepoListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListType.swift; sourceTree = "<group>"; };
 		4AC16B5821BB8A360012B89B /* Repository Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC16B5B21BB8A360012B89B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +166,7 @@
 			children = (
 				4A86F2F421BC4EA3003B6CC2 /* Repository.swift */,
 				4A86F2F621BC5197003B6CC2 /* Owner.swift */,
+				4A86F32021BD2A9C003B6CC2 /* RepoListType.swift */,
 			);
 			path = Entiity;
 			sourceTree = "<group>";
@@ -169,7 +184,8 @@
 		4A86F2FF21BC5369003B6CC2 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				4A86F2FB21BC5239003B6CC2 /* RepoListRequest.swift */,
+				4A86F2FB21BC5239003B6CC2 /* RepoListSearchRequest.swift */,
+				4A86F31921BD19E1003B6CC2 /* RepoListUserRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -177,7 +193,8 @@
 		4A86F30021BC5372003B6CC2 /* EnpoindProvider */ = {
 			isa = PBXGroup;
 			children = (
-				4A86F30121BC5393003B6CC2 /* RepoListEndpointProvider.swift */,
+				4A86F30121BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift */,
+				4A86F31B21BD1A21003B6CC2 /* RepoListUserEndProvider.swift */,
 			);
 			path = EnpoindProvider;
 			sourceTree = "<group>";
@@ -216,6 +233,45 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		4A86F30F21BCF48F003B6CC2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F31721BD1316003B6CC2 /* RepoListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4A86F31021BCF4A2003B6CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F31521BCFE1A003B6CC2 /* RepoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4A86F31121BCF4B0003B6CC2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4A86F31221BCF4BD003B6CC2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F31321BCF4D9003B6CC2 /* RepoListViperProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4A86F31D21BD24B4003B6CC2 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F31E21BD252A003B6CC2 /* RepoListDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		4AC16B4F21BB8A360012B89B = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +295,7 @@
 		4AC16B5A21BB8A360012B89B /* Repository Finder */ = {
 			isa = PBXGroup;
 			children = (
+				4A86F31D21BD24B4003B6CC2 /* DTO */,
 				4AC16C0621BC24100012B89B /* Modules */,
 				4AC16C0521BC24020012B89B /* Services */,
 				4AC16BFB21BC10500012B89B /* CustomViews */,
@@ -372,8 +429,12 @@
 		4AC16BF321BC08E80012B89B /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				4A86F2F321BC4C2D003B6CC2 /* Entiity */,
+				4A86F31221BCF4BD003B6CC2 /* Protocols */,
 				4AC16BF421BC09130012B89B /* View */,
+				4A86F30F21BCF48F003B6CC2 /* Interactor */,
+				4A86F31021BCF4A2003B6CC2 /* Presenter */,
+				4A86F2F321BC4C2D003B6CC2 /* Entiity */,
+				4A86F31121BCF4B0003B6CC2 /* Router */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
@@ -597,11 +658,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,14 +697,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A86F2FC21BC5239003B6CC2 /* RepoListRequest.swift in Sources */,
+				4A86F31621BCFE1A003B6CC2 /* RepoListPresenter.swift in Sources */,
+				4A86F2FC21BC5239003B6CC2 /* RepoListSearchRequest.swift in Sources */,
 				4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */,
 				4AC16B8821BB8E5F0012B89B /* EmptyDTO.swift in Sources */,
 				4AC16B9121BB8F140012B89B /* BaseURL.swift in Sources */,
 				4AC16BA321BB97580012B89B /* Protocols.swift in Sources */,
+				4A86F31A21BD19E2003B6CC2 /* RepoListUserRequest.swift in Sources */,
 				4AC16C1121BC2B4D0012B89B /* ForkListViewController.swift in Sources */,
 				4AC16C1721BC37350012B89B /* NothingFoundView.swift in Sources */,
 				4AC16BAA21BB99F80012B89B /* BaseURL+RepositoryFinder.swift in Sources */,
+				4A86F31821BD1316003B6CC2 /* RepoListInteractor.swift in Sources */,
 				4A86F2F521BC4EA3003B6CC2 /* Repository.swift in Sources */,
 				4AC16BA821BB99A30012B89B /* API+RepositoryFinder.swift in Sources */,
 				4AC16B8221BB8DB10012B89B /* Singleton.swift in Sources */,
@@ -652,7 +718,9 @@
 				4A86F2F721BC5197003B6CC2 /* Owner.swift in Sources */,
 				4AC16BFA21BC0A480012B89B /* SearchView.swift in Sources */,
 				4AC16B8C21BB8EAD0012B89B /* NetworkManager.swift in Sources */,
+				4A86F31F21BD252A003B6CC2 /* RepoListDTO.swift in Sources */,
 				4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */,
+				4A86F31C21BD1A21003B6CC2 /* RepoListUserEndProvider.swift in Sources */,
 				4AC16B7F21BB8D5B0012B89B /* Constants.swift in Sources */,
 				4AC16B8F21BB8EE80012B89B /* API.swift in Sources */,
 				4A86F30521BC59B0003B6CC2 /* RepoListResponse.swift in Sources */,
@@ -660,10 +728,12 @@
 				4AC16B9721BB8FAB0012B89B /* RequestError.swift in Sources */,
 				4AC16B9521BB8F7B0012B89B /* NetworkError.swift in Sources */,
 				4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */,
-				4A86F30221BC5393003B6CC2 /* RepoListEndpointProvider.swift in Sources */,
+				4A86F30221BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift in Sources */,
+				4A86F31421BCF4D9003B6CC2 /* RepoListViperProtocols.swift in Sources */,
 				4AC16B9E21BB91790012B89B /* AlamofireManager.swift in Sources */,
 				4AC16B8621BB8E3A0012B89B /* DTO.swift in Sources */,
 				4AC16BA021BB97170012B89B /* Extensions.swift in Sources */,
+				4A86F32121BD2A9C003B6CC2 /* RepoListType.swift in Sources */,
 				4AC16C0021BC11C40012B89B /* RepoListTableViewCell.swift in Sources */,
 				4AC16C0B21BC24E60012B89B /* ShowMoreTableViewCell.swift in Sources */,
 				4AC16B9321BB8F5E0012B89B /* Result.swift in Sources */,

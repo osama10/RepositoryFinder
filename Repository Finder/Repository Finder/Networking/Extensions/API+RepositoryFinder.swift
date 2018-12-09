@@ -11,4 +11,6 @@ import Foundation
 let apiVersion = "api/v0"
 extension API {
     static let repositories = API(baseURL: .baseURL, path: ["search", "repositories"])
+    static var userRepositories = API(baseURL: .baseURL)
+    static let userAuthentication = API(baseURL: .baseURL, path: ["user"])
 }

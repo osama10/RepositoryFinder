@@ -60,6 +60,31 @@ extension UITableView {
         self.dataSource = view as? UITableViewDataSource
     }
     
+    func scroll(to: scrollsTo, animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+            let numberOfSections = self.numberOfSections
+            let numberOfRows = self.numberOfRows(inSection: numberOfSections-1)
+            switch to{
+            case .top:
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    self.scrollToRow(at: indexPath, at: .top, animated: animated)
+                }
+                break
+            case .bottom:
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: numberOfRows-1, section: (numberOfSections-1))
+                    self.scrollToRow(at: indexPath, at: .bottom, animated: animated)
+                }
+                break
+            }
+        }
+    }
+    
+    enum scrollsTo {
+        case top,bottom
+    }
+    
 }
 
 extension Encodable {
@@ -124,19 +149,7 @@ extension AlertsPresentable where Self : UIViewController {
         present(alertController, animated: true, completion: nil)
         
     }
-    
-    func showPermissionAlert(title : String , message : String , actionButtonTitle : String , completion :  @escaping () -> Void){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: actionButtonTitle , style: .default, handler: {
-            alert -> Void in
-            
-            completion()
-        })
-        
-        alertController.addAction(saveAction)
-        present(alertController, animated: true, completion: nil)
-    }
+
 }
 
 extension Int{

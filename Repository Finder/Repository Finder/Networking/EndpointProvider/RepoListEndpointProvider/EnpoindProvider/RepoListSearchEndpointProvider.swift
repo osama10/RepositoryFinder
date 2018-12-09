@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct RepoListEndpointProvider {
-    let requestObject : RepoListRequest
+struct RepoListSearchEndpointProvider {
+    let requestObject : RepoListSearchRequest
     private func getQueryParams()->QueryParams{
         return ["q" : requestObject.queryString, "page" : requestObject.pageNumber, "per_page" : requestObject.perPageElement]
     }
 }
 
-extension RepoListEndpointProvider : EndpointProvider{
+extension RepoListSearchEndpointProvider : EndpointProvider{
     typealias Response = RepoListResponse
     
-    typealias Body = RepoListRequest
+    typealias Body = RepoListSearchRequest
     
     typealias Failure = RequestError
     

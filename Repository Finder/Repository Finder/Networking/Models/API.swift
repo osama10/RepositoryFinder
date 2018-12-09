@@ -10,7 +10,7 @@ import Foundation
 
 public struct API {
     let baseURL: BaseURL
-    let path: [String]
+    var path: [String]
     
     public init(baseURL: BaseURL, path: [String] = []) {
         self.baseURL = baseURL

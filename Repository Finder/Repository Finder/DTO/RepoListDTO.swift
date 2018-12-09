@@ -1,5 +1,5 @@
 //
-//  RepoListRequest.swift
+//  RepoListDTO.swift
 //  Repository Finder
 //
 //  Created by Osama Bin Bashir on 09/12/2018.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct RepoListRequest : DTO{
-    let queryString : String
-    let pageNumber : String
-    let perPageElement : String
+struct RepoListDTO {
+    var repositories : [Repository]
+    var isError : Bool
+    var errorMessage : String
+    var showMore : Bool
 }

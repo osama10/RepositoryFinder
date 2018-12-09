@@ -3,6 +3,6 @@ target 'Repository Finder' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'SDWebImage', '~> 4.0'
-
+    pod 'NVActivityIndicatorView'
 
 end

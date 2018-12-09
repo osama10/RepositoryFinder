@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class RepoListViewController: UIViewController {
+import NVActivityIndicatorView
+class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable {
     
     @IBOutlet weak var searchViewContainerView: UIView!
     
@@ -18,21 +18,22 @@ class RepoListViewController: UIViewController {
     weak var searchView : SearchView!
     weak var nothingFoundView : NothingFoundView!
     
+    var presenter : (RepoListPresenter & RepoLisViewToPresenterDelegate & RepoListInteractorToPresenterDelegate)!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSettings()
-        let repoRequest = RepoListRequest(queryString: "detail", pageNumber: "1", perPageElement: "30")
-        let  repoListEndpoingProvider = RepoListEndpointProvider(requestObject: repoRequest)
-        AlamofireManager.shared.request(repoListEndpoingProvider) { (result) in
-            switch result{
-            case .success(let data):
-                print(data.totalCount)
-            case .error(let error):
-                print(error.localizedDescription )
-            case .failure(let failure):
-                print(failure.error ?? "Failure")
-            }
-        }
+        
+        let services = RepoListServicesImp(networkManager: AlamofireManager.shared)
+        
+        var interactor : RepoListPresenterToInteractorDelegate & RepoListInteractor = RepoListInteractorImp(repoListServices: services)
+        
+        presenter = RepoListPresenterImp(view: self, viewType: .search)
+        presenter.interactor = interactor
+        
+        interactor.presenter = presenter
+        
+        presenter.viewDidLoad()
     }
     
     private func initialSettings(){
@@ -41,6 +42,7 @@ class RepoListViewController: UIViewController {
         self.view.backgroundColor = .backgroundColor
         self.addNothingFoundView()
         self.setLogo()
+        self.nothingFoundContainerView.isHidden = true
     }
     
     private func setLogo(){
@@ -78,35 +80,81 @@ class RepoListViewController: UIViewController {
         nothingFoundContainerView.addSubview(nothingFoundView)
     }
     
+    
+    
 }
 
 extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.presenter.numberOfRows(section: 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return self.getCell(of:tableView , at: indexPath)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didTapOnRow(with: indexPath.row)
+    }
+    
+    private func getCell(of tableView : UITableView , at indexPath : IndexPath)->UITableViewCell{
         var cell : UITableViewCell!
         
-        if(indexPath.row == 4){
-            let _cell = tableView.dequeResuseableCell(for: indexPath) as ShowMoreTableViewCell
-            cell = _cell
-        }else {
+        if(presenter.willShowMore()){
+            if(indexPath.row == self.presenter.totalRepositories){
+                let _cell = tableView.dequeResuseableCell(for: indexPath) as ShowMoreTableViewCell
+                cell = _cell
+            }else {
+                let _cell = tableView.dequeResuseableCell(for: indexPath) as RepoListTableViewCell
+                _cell.setData(repository: self.presenter.getRepository(at: indexPath.row))
+                
+                cell = _cell
+            }
+        }else{
             let _cell = tableView.dequeResuseableCell(for: indexPath) as RepoListTableViewCell
+            _cell.setData(repository: self.presenter.getRepository(at: indexPath.row))
             cell = _cell
         }
         
         return cell
     }
+}
+
+extension RepoListViewController : PresenterToViewDelegate{
+    func reloadData() {
+        self.tableView.reloadData()
+    }
     
+    func scrollTableViewToTop() {
+        self.tableView.scroll(to: .top, animated: false)
+
+    }
+    func startAnimatingLoader() {
+        self.startAnimating()
+    }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func stopAnimatingLoader() {
+        self.stopAnimating()
         
     }
+    
+    func showNoResultFoundAlert() {
+        self.nothingFoundContainerView.isHidden = false
+    }
+    
+    func showErrorAlert(with title : String, message : String) {
+        self.showAlert(with: title, and: message)
+    }
+    
+    
 }
 
 
 extension RepoListViewController : SearchViewDelegate{
     func didTapOnSearchButton(searchString: String) {
+        self.nothingFoundContainerView.isHidden = true
+        presenter.search(queryString: searchString)
+        
     }
 }

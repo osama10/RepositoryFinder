@@ -12,5 +12,6 @@ import Foundation
 protocol RepoListServices {
     
     var networkManager : NetworkManager{ get }
-    func getRepositories(queryString : String, page : Int , perPageNumber : Int, completion : @escaping ((RepoListResult)->Void))
+    func getUserRepositories(userName : String, completion : @escaping UserRepoCompletion )
+    func getRepositoriesFromSearch(queryString : String, page : Int , perPageNumber : Int, completion : @escaping SearchRepoCompletion)
 }
