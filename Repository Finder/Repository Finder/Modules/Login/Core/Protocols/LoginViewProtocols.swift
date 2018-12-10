@@ -17,6 +17,7 @@ protocol LoginViewPresenterToViewDelegate : class{
     func startAnimatingLoader()
     func stopAnimatingLoader()
     func showErrorAlert(with title : String, message : String)
+    func emptyTextFields()
 }
 
 protocol LoginViewPresenterToRouterDelegate : class{

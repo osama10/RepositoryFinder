@@ -27,7 +27,7 @@ protocol RepoListPresenterToViewDelegate : class{
 }
 
 protocol RepoListPresenterToInteractorDelegate : class {
-    func fetchUserRepositories(userName : String)
+    func fetchUserRepositories(userName : String, page : Int, perPageNumber : Int, totalRepo : Int)
     func fetchSearchRepositories(queryString : String, page : Int, perPageNumber : Int)
 }
 

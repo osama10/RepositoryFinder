@@ -23,7 +23,7 @@ class RepoListInteractorImp : RepoListInteractor{
    
     var page : Int = 0
     var perPageNumber = 0
-    
+    var userTotalRepo = 0
     init(repoListServices : RepoListServices) {
         self.repoListServices = repoListServices
     }
@@ -36,8 +36,8 @@ class RepoListInteractorImp : RepoListInteractor{
         }
     }
     
-    private func getUserRepositories(userName: String) {
-        self.repoListServices.getUserRepositories(userName: userName){ [weak self] (result) in
+    private func getUserRepositories(userName: String, page : Int, perPageNumber : Int) {
+        self.repoListServices.getUserRepositories(userName: userName, page: page, perPageNumber: perPageNumber){ [weak self] (result) in
             guard let `self` = self else{ return }
             let repoListDTO = self.preapreDataFromUserRepoRequest(result: result)
             self.presenter.didRepositoriesFetched(repoListDTO: repoListDTO)
@@ -48,7 +48,8 @@ class RepoListInteractorImp : RepoListInteractor{
         var repoListDTO : RepoListDTO!
         switch result {
         case .success(let data):
-            repoListDTO = RepoListDTO(repositories: data, isError: false, errorMessage: "", showMore: false)
+            let shouldShowMore = ((self.perPageNumber) * self.page < self.userTotalRepo) ? true : false
+            repoListDTO = RepoListDTO(repositories: data, isError: false, errorMessage: "", showMore: shouldShowMore)
         case .error(let errorMessage):
             repoListDTO = RepoListDTO(repositories: [], isError: true, errorMessage: errorMessage, showMore: false)
             
@@ -72,8 +73,12 @@ class RepoListInteractorImp : RepoListInteractor{
 }
 
 extension RepoListInteractorImp : RepoListPresenterToInteractorDelegate{
-    func fetchUserRepositories(userName: String) {
-        self.getUserRepositories(userName: userName)
+    func fetchUserRepositories(userName : String, page : Int, perPageNumber : Int, totalRepo : Int) {
+        self.userTotalRepo = totalRepo
+        self.page = page
+        self.perPageNumber = perPageNumber
+        self.getUserRepositories(userName: userName, page: page, perPageNumber: perPageNumber)
+        
     }
     
     func fetchSearchRepositories(queryString: String, page: Int, perPageNumber: Int) {

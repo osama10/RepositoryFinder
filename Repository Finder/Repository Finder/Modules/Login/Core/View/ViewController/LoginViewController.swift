@@ -57,5 +57,9 @@ extension LoginViewController : LoginViewPresenterToViewDelegate{
         self.showAlert(with: title, and: message)
     }
     
+    func emptyTextFields() {
+        self.userNameTextField.text = ""
+        self.passwordTextField.text = ""
+    }
     
 }

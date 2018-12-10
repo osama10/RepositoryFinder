@@ -10,6 +10,10 @@ import Foundation
 
 struct RepoListUserEndProvider {
     let requestObject : RepoListUserRequest
+    
+    private func  getQueryParams()->[String : String]{
+        return ["page" : requestObject.page, "per_page" : requestObject.perPageNumber]
+    }
 }
 
 extension RepoListUserEndProvider : EndpointProvider{
@@ -20,6 +24,6 @@ extension RepoListUserEndProvider : EndpointProvider{
     var endpoint: Endpoint<Body>{
         var api : API = .userRepositories
         api.path = ["users", requestObject.userName, "repos"]
-        return Endpoint(api: api, method: .get)
+        return Endpoint(api: api, method: .get, queryParams : self.getQueryParams())
     }
 }

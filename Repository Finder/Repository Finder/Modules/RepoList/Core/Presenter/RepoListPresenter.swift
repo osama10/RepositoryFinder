@@ -77,15 +77,14 @@ class RepoListPresenterImp : RepoListPresenter{
         
     }
     
-    private func getRepositories(){
-        if(viewType == .user){
-            guard let userName = owner?.login else {
-                self.view.showErrorAlert(with: "Error", message:somethingUnexpectedError )
-                return
-                
-            }
-            self.interactor.fetchUserRepositories(userName: userName)
+    private func getUserRepositories(){
+        guard let userName = owner?.login else {
+            self.view.showErrorAlert(with: "Error", message:somethingUnexpectedError )
+            return
         }
+        self.interactor.fetchUserRepositories(userName:userName, page: self.page, perPageNumber: self.perPageNumber, totalRepo: owner?.publicRepos ?? 0)
+        self.page = self.page + 1
+        
     }
     
     private func getSearchRespositories(queryString : String, page : Int, perPageNumber : Int){
@@ -95,15 +94,12 @@ class RepoListPresenterImp : RepoListPresenter{
 
 extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     func viewDidLoad() {
-        
         if(viewType == .search){
-            defaultSettingForSearchFlow()
+            self.defaultSettingForSearchFlow()
         }else {
-            defaultSettingForUserFlow()
+            self.defaultSettingForUserFlow()
         }
     }
-    
-    
     
     func search(queryString: String) {
         self.page = 1
@@ -124,12 +120,14 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     
     private func defaultSettingForSearchFlow(){
         self.view.setNavBarButton(with: "Login")
-
+        
     }
     
     private func defaultSettingForUserFlow(){
         self.view.setNavBarButton(with: "Logout")
         self.view.hideSearchBar()
+        self.view.startAnimatingLoader()
+        self.getUserRepositories()
     }
     
     private func didTapOnRowHandler(with index : Int){
@@ -152,11 +150,23 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     }
     
     private func showMoreRepositories(){
+        if(viewType == .search){
+            self.showMoreSearchRepositories()
+        }else{
+            self.showMoreUserRepositories()
+        }
+    }
+    
+    private func showMoreSearchRepositories(){
         self.page = self.page + 1
         self.view.startAnimatingLoader()
         self.getSearchRespositories(queryString: self.queryString, page: self.page, perPageNumber: self.perPageNumber)
     }
     
+    private func showMoreUserRepositories(){
+        self.view.startAnimatingLoader()
+        self.getUserRepositories()
+    }
 }
 
 extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{
@@ -178,7 +188,6 @@ extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{
     private func repositoriesFetchedErrorHandler(errorMessage : String){
         self.view.showErrorAlert(with: "Request Failed", message: errorMessage)
     }
-    
     
     private func repositoriesFetchedSuccessfullHandler(repoListDTO: RepoListDTO){
         if(self.willShowMore()){

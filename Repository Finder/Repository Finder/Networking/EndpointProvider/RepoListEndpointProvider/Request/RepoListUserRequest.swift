@@ -9,4 +9,6 @@
 import Foundation
 struct RepoListUserRequest : DTO {
     let userName : String
+    let page : String
+    let perPageNumber : String
 }

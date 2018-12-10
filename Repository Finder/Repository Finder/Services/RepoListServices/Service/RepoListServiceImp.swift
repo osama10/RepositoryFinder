@@ -18,8 +18,8 @@ final class RepoListServicesImp : RepoListServices{
         self.networkManager = networkManager
     }
     
-    func getUserRepositories(userName: String, completion: @escaping UserRepoCompletion) {
-        let repoRequest = RepoListUserRequest(userName: userName)
+    func getUserRepositories(userName: String, page : Int , perPageNumber : Int , completion: @escaping UserRepoCompletion) {
+        let repoRequest = RepoListUserRequest(userName: userName, page: page.toString, perPageNumber: perPageNumber.toString)
         let  repoListUserEndpointProvider = RepoListUserEndProvider(requestObject: repoRequest)
         
         self.networkManager.request(repoListUserEndpointProvider) { [weak self] (result) in

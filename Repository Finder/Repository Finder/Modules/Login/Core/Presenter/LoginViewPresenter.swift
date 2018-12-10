@@ -54,7 +54,7 @@ extension LoginViewPresenterImp : LoginViewInteractotToPresenterDelegate{
             self.view.showErrorAlert(with: "", message: loginDTO.errorMessage)
         }else{
             self.router.showRepoListView(with:.user, owner: loginDTO.owners)
-
+            self.view.emptyTextFields()
         }
     }
 }
