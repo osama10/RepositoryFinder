@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         let router : RepoListRouter = RepoListRouterImp()
-        let mainVC = router.createRepoListScreen()
+        let mainVC = router.showRepoListScreen()
         self.window?.rootViewController = mainVC
         self.window?.makeKeyAndVisible()
         return true

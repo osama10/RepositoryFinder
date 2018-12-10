@@ -16,11 +16,15 @@ class ForkListViewController: UIViewController, AlertsPresentable, NVActivityInd
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initialSettings()
+        
+    }
+    
+    private func initialSettings(){
         self.setupTableView()
         self.title = self.presenter.repoName
         self.presenter.viewDidLoad()
         self.view.backgroundColor = .backgroundColor
-        
     }
     
     private func setupTableView(){
@@ -58,10 +62,10 @@ extension ForkListViewController : UITableViewDataSource, UITableViewDelegate{
             forkListCell.setData(owner: self.presenter.getOwner(at: indexPath.row))
             cell = forkListCell
         }
-    
-    
-    return cell
-}
+        
+        
+        return cell
+    }
 }
 
 extension ForkListViewController : ForkListPresenterToViewDelegate{

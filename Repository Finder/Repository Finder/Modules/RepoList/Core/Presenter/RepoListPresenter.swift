@@ -10,7 +10,7 @@ import Foundation
 
 protocol RepoListPresenter {
     
-    var view : PresenterToViewDelegate!{ get }
+    var view : RepoListPresenterToViewDelegate!{ get }
     var interactor : RepoListPresenterToInteractorDelegate!{ get set }
     var router : RepoListPresenterToRouterDelagate!{ get set}
     
@@ -30,7 +30,7 @@ protocol RepoListPresenter {
 
 class RepoListPresenterImp : RepoListPresenter{
     
-    weak var view: PresenterToViewDelegate!
+    weak var view: RepoListPresenterToViewDelegate!
     var interactor: RepoListPresenterToInteractorDelegate!
     var router: RepoListPresenterToRouterDelagate!
     
@@ -47,7 +47,7 @@ class RepoListPresenterImp : RepoListPresenter{
         return repoListDTO.repositories.count
     }
     
-    init(view : PresenterToViewDelegate ,viewType : RepoListType , owner : Owner? = nil) {
+    init(view : RepoListPresenterToViewDelegate ,viewType : RepoListType , owner : Owner? = nil) {
         self.view = view
         self.repoListDTO = nil
         self.viewType = viewType

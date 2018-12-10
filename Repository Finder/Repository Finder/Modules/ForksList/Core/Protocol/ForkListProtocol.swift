@@ -8,7 +8,7 @@
 
 import Foundation
 
-import Foundation
+import UIKit
 
 protocol ForkListViewToPresenterDelegate : class{
     func viewDidLoad()
@@ -27,7 +27,6 @@ protocol ForkListPresenterToInteractorDelegate : class {
 }
 
 protocol ForkListPresenterToRouterDelagate : class{
-    func pushToForkScreen(for Forksitory : String)
 }
 
 protocol ForkListInteractorToPresenterDelegate : class{
@@ -36,5 +35,5 @@ protocol ForkListInteractorToPresenterDelegate : class{
 
 
 protocol ForkListRouterToPresenterDelegate : class{
-    
+    func pop()
 }

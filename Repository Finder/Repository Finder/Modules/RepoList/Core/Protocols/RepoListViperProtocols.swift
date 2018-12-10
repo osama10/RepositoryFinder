@@ -14,7 +14,7 @@ protocol RepoLisViewToPresenterDelegate : class{
     func didTapOnRow(with index : Int)
 }
 
-protocol PresenterToViewDelegate : class{
+protocol RepoListPresenterToViewDelegate : class{
     func reloadData()
     func scrollTableViewToTop()
     func startAnimatingLoader()

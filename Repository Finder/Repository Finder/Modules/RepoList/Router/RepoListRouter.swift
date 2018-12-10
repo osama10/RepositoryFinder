@@ -12,7 +12,7 @@ import UIKit
 protocol RepoListRouter  {
     var presenter : RepoListRouterToPresenterDelegate! { get set}
     var navigationController : UINavigationController! { get }
-    func createRepoListScreen()->UINavigationController
+    func showRepoListScreen()->UINavigationController
 }
 
 class RepoListRouterImp : RepoListRouter{
@@ -20,44 +20,22 @@ class RepoListRouterImp : RepoListRouter{
     weak var presenter: RepoListRouterToPresenterDelegate!
     var navigationController: UINavigationController!
     
-    func createRepoListScreen() -> UINavigationController {
-        let repoViewController = RepoListRouterImp.instantiateViewController() as! RepoListViewController
-
-        let services = RepoListServicesImp(networkManager: AlamofireManager.shared)
-        var interactor : RepoListPresenterToInteractorDelegate & RepoListInteractor = RepoListInteractorImp(repoListServices: services)
-        let presenter = RepoListPresenterImp(view: repoViewController, viewType: .search)
-        
-        repoViewController.presenter = presenter
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        presenter.router = self
-        
-        self.navigationController = UINavigationController(rootViewController: repoViewController)
+    func showRepoListScreen() -> UINavigationController {
+        let repoListBuilder : RepoListBuilder = RepoListBuilderImp()
+        let repoListVC = repoListBuilder.build(with: .search, router: self)
+        self.navigationController = UINavigationController(rootViewController: repoListVC)
         self.navigationController.makeDefaultSettings()
         return self.navigationController
     }
-       
     
-   
 }
 
 extension RepoListRouterImp : RepoListPresenterToRouterDelagate{
     func pushToForkScreen(repository: String, userName: String, totalForks: Int){
+        let forkListBuilder : ForksListBuilder = ForksListBuilderImp()
+        let forkListVC = forkListBuilder.build(repository: repository, userName: userName, totalForks: totalForks)
         
-        let viewController =  ForkListRouterImp.instantiateViewController() as! ForkListViewController
-        
-        let services = ForkListServicesImp(networkManager: AlamofireManager.shared)
-     
-        var interactor : ForkListPresenterToInteractorDelegate & ForkListInteractor = ForkListInteractorImp(forkListServices: services)
-        let presenter = ForkListPresenterImp(view: viewController, userName: userName, repoName: repository, totalForks: totalForks)
-        
-        viewController.presenter = presenter
-        presenter.interactor = interactor
-        //presenter.router = self as! ForkListPresenterToRouterDelagate
-        interactor.presenter = presenter
-        
-        
-        self.navigationController.pushViewController(viewController, animated: true)
+        self.navigationController.pushViewController(forkListVC, animated: true)
     }
 }
 

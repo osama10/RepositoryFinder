@@ -33,6 +33,8 @@
 		4A86F34021BD9494003B6CC2 /* ForkListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F33F21BD9494003B6CC2 /* ForkListProtocol.swift */; };
 		4A86F34221BD94E3003B6CC2 /* ForkListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34121BD94E3003B6CC2 /* ForkListInteractor.swift */; };
 		4A86F34421BD9C6D003B6CC2 /* ForkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34321BD9C6D003B6CC2 /* ForkListPresenter.swift */; };
+		4A86F34921BE3B3D003B6CC2 /* RepoListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34821BE3B3D003B6CC2 /* RepoListBuilder.swift */; };
+		4A86F34D21BE462D003B6CC2 /* ForksListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */; };
 		4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5B21BB8A360012B89B /* AppDelegate.swift */; };
 		4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */; };
 		4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B5F21BB8A360012B89B /* Main.storyboard */; };
@@ -111,6 +113,8 @@
 		4A86F33F21BD9494003B6CC2 /* ForkListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListProtocol.swift; sourceTree = "<group>"; };
 		4A86F34121BD94E3003B6CC2 /* ForkListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListInteractor.swift; sourceTree = "<group>"; };
 		4A86F34321BD9C6D003B6CC2 /* ForkListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListPresenter.swift; sourceTree = "<group>"; };
+		4A86F34821BE3B3D003B6CC2 /* RepoListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListBuilder.swift; sourceTree = "<group>"; };
+		4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksListBuilder.swift; sourceTree = "<group>"; };
 		4AC16B5821BB8A360012B89B /* Repository Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC16B5B21BB8A360012B89B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +390,52 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		4A86F34521BE0219003B6CC2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A86F34621BE3AD4003B6CC2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F31221BCF4BD003B6CC2 /* Protocols */,
+				4AC16BF421BC09130012B89B /* View */,
+				4A86F30F21BCF48F003B6CC2 /* Interactor */,
+				4A86F31021BCF4A2003B6CC2 /* Presenter */,
+				4A86F2F321BC4C2D003B6CC2 /* Entiity */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4A86F34721BE3B26003B6CC2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F34821BE3B3D003B6CC2 /* RepoListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		4A86F34A21BE45F5003B6CC2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F33E21BD93EC003B6CC2 /* Protocol */,
+				4AC16C0821BC245F0012B89B /* View */,
+				4A86F33D21BD9008003B6CC2 /* Interactor */,
+				4A86F32721BD82DC003B6CC2 /* Presenter */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4A86F34B21BE4618003B6CC2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		4AC16B4F21BB8A360012B89B = {
 			isa = PBXGroup;
 			children = (
@@ -544,11 +594,8 @@
 		4AC16BF321BC08E80012B89B /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				4A86F31221BCF4BD003B6CC2 /* Protocols */,
-				4AC16BF421BC09130012B89B /* View */,
-				4A86F30F21BCF48F003B6CC2 /* Interactor */,
-				4A86F31021BCF4A2003B6CC2 /* Presenter */,
-				4A86F2F321BC4C2D003B6CC2 /* Entiity */,
+				4A86F34721BE3B26003B6CC2 /* Builder */,
+				4A86F34621BE3AD4003B6CC2 /* Core */,
 				4A86F31121BCF4B0003B6CC2 /* Router */,
 			);
 			path = RepoList;
@@ -614,6 +661,7 @@
 		4AC16C0621BC24100012B89B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A86F34521BE0219003B6CC2 /* Login */,
 				4AC16C0721BC24430012B89B /* ForksList */,
 				4AC16BF321BC08E80012B89B /* RepoList */,
 			);
@@ -623,11 +671,9 @@
 		4AC16C0721BC24430012B89B /* ForksList */ = {
 			isa = PBXGroup;
 			children = (
-				4A86F33E21BD93EC003B6CC2 /* Protocol */,
-				4A86F33D21BD9008003B6CC2 /* Interactor */,
-				4A86F32721BD82DC003B6CC2 /* Presenter */,
+				4A86F34B21BE4618003B6CC2 /* Builder */,
+				4A86F34A21BE45F5003B6CC2 /* Core */,
 				4A86F32421BD7E4F003B6CC2 /* Router */,
-				4AC16C0821BC245F0012B89B /* View */,
 			);
 			path = ForksList;
 			sourceTree = "<group>";
@@ -819,6 +865,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A86F31621BCFE1A003B6CC2 /* RepoListPresenter.swift in Sources */,
+				4A86F34D21BE462D003B6CC2 /* ForksListBuilder.swift in Sources */,
 				4A86F2FC21BC5239003B6CC2 /* RepoListSearchRequest.swift in Sources */,
 				4A86F33921BD8946003B6CC2 /* ForkListServicesImp.swift in Sources */,
 				4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */,
@@ -861,6 +908,7 @@
 				4A86F30221BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift in Sources */,
 				4A86F31421BCF4D9003B6CC2 /* RepoListViperProtocols.swift in Sources */,
 				4A86F32621BD7E6A003B6CC2 /* ForkListRouter.swift in Sources */,
+				4A86F34921BE3B3D003B6CC2 /* RepoListBuilder.swift in Sources */,
 				4AC16B9E21BB91790012B89B /* AlamofireManager.swift in Sources */,
 				4AC16B8621BB8E3A0012B89B /* DTO.swift in Sources */,
 				4AC16BA021BB97170012B89B /* Extensions.swift in Sources */,

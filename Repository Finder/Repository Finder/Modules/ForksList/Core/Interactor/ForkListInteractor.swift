@@ -15,7 +15,7 @@ protocol ForkListInteractor {
 
 class ForkListInteractorImp : ForkListInteractor{
     var forkListServices: ForkListServices
-    var presenter: ForkListInteractorToPresenterDelegate!
+    weak var presenter: ForkListInteractorToPresenterDelegate!
     var page : Int = 0
     var perPageNumber = 0
     var totalForks = 0

@@ -110,7 +110,7 @@ extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension RepoListViewController : PresenterToViewDelegate{
+extension RepoListViewController : RepoListPresenterToViewDelegate{
     func reloadData() {
         self.tableView.reloadData()
     }
