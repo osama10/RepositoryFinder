@@ -12,4 +12,3 @@ It's an application that let user query public github repositories. It also allo
 - SDWebImageView
 - NVActivityIndicatorView
 
-
