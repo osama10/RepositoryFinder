@@ -46,6 +46,28 @@
 		4A86F37021BE89C0003B6CC2 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36F21BE89C0003B6CC2 /* LoginServices.swift */; };
 		4A86F37221BE8A76003B6CC2 /* LoginServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37121BE8A76003B6CC2 /* LoginServiceImp.swift */; };
 		4A86F37421BE95BF003B6CC2 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37321BE95BF003B6CC2 /* LoginDTO.swift */; };
+		4A86F37821BEB85E003B6CC2 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37721BEB85E003B6CC2 /* MockNetworkManager.swift */; };
+		4A86F37C21BEBB65003B6CC2 /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */; };
+		4A86F37E21BEBD12003B6CC2 /* MockLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */; };
+		4A86F38021BEBDA9003B6CC2 /* MockLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */; };
+		4A86F38221BEBE19003B6CC2 /* MockLoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */; };
+		4A86F38821BEBF39003B6CC2 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */; };
+		4A86F38A21BEC6CB003B6CC2 /* LoginViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */; };
+		4A86F38D21BEC7EC003B6CC2 /* MockLoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38C21BEC7EC003B6CC2 /* MockLoginServices.swift */; };
+		4A86F39021BECB5E003B6CC2 /* MockForkListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38F21BECB5E003B6CC2 /* MockForkListServices.swift */; };
+		4A86F39221BECD37003B6CC2 /* MockRepoListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39121BECD37003B6CC2 /* MockRepoListServices.swift */; };
+		4A86F39521BECE95003B6CC2 /* MockForkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39421BECE95003B6CC2 /* MockForkListPresenter.swift */; };
+		4A86F39721BECFB6003B6CC2 /* MockForkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39621BECFB6003B6CC2 /* MockForkListView.swift */; };
+		4A86F39921BED386003B6CC2 /* MockForkListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39821BED386003B6CC2 /* MockForkListInteractor.swift */; };
+		4A86F39B21BED3FC003B6CC2 /* MockForkListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39A21BED3FC003B6CC2 /* MockForkListRouter.swift */; };
+		4A86F39D21BED465003B6CC2 /* ForkListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39C21BED465003B6CC2 /* ForkListPresenterTests.swift */; };
+		4A86F39F21BED6E4003B6CC2 /* ForkListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39E21BED6E4003B6CC2 /* ForkListInteractorTests.swift */; };
+		4A86F3A321BED8AB003B6CC2 /* MockRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3A221BED8AB003B6CC2 /* MockRepoListView.swift */; };
+		4A86F3A521BED9F8003B6CC2 /* MockRepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3A421BED9F8003B6CC2 /* MockRepoListInteractor.swift */; };
+		4A86F3A721BEDAB7003B6CC2 /* MockRepoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3A621BEDAB7003B6CC2 /* MockRepoListRouter.swift */; };
+		4A86F3A921BEDB57003B6CC2 /* MockRepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3A821BEDB57003B6CC2 /* MockRepoListPresenter.swift */; };
+		4A86F3AB21BEDC49003B6CC2 /* RepoListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3AA21BEDC49003B6CC2 /* RepoListPresenterTests.swift */; };
+		4A86F3AD21BEE34A003B6CC2 /* RepoListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F3AC21BEE34A003B6CC2 /* RepoListInteractorTests.swift */; };
 		4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5B21BB8A360012B89B /* AppDelegate.swift */; };
 		4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */; };
 		4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B5F21BB8A360012B89B /* Main.storyboard */; };
@@ -137,6 +159,28 @@
 		4A86F36F21BE89C0003B6CC2 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		4A86F37121BE8A76003B6CC2 /* LoginServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceImp.swift; sourceTree = "<group>"; };
 		4A86F37321BE95BF003B6CC2 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		4A86F37721BEB85E003B6CC2 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
+		4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginPresenter.swift; sourceTree = "<group>"; };
+		4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginInteractor.swift; sourceTree = "<group>"; };
+		4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginViewRouter.swift; sourceTree = "<group>"; };
+		4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorTests.swift; sourceTree = "<group>"; };
+		4A86F38C21BEC7EC003B6CC2 /* MockLoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginServices.swift; sourceTree = "<group>"; };
+		4A86F38F21BECB5E003B6CC2 /* MockForkListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListServices.swift; sourceTree = "<group>"; };
+		4A86F39121BECD37003B6CC2 /* MockRepoListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListServices.swift; sourceTree = "<group>"; };
+		4A86F39421BECE95003B6CC2 /* MockForkListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListPresenter.swift; sourceTree = "<group>"; };
+		4A86F39621BECFB6003B6CC2 /* MockForkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListView.swift; sourceTree = "<group>"; };
+		4A86F39821BED386003B6CC2 /* MockForkListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListInteractor.swift; sourceTree = "<group>"; };
+		4A86F39A21BED3FC003B6CC2 /* MockForkListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListRouter.swift; sourceTree = "<group>"; };
+		4A86F39C21BED465003B6CC2 /* ForkListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListPresenterTests.swift; sourceTree = "<group>"; };
+		4A86F39E21BED6E4003B6CC2 /* ForkListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListInteractorTests.swift; sourceTree = "<group>"; };
+		4A86F3A221BED8AB003B6CC2 /* MockRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListView.swift; sourceTree = "<group>"; };
+		4A86F3A421BED9F8003B6CC2 /* MockRepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListInteractor.swift; sourceTree = "<group>"; };
+		4A86F3A621BEDAB7003B6CC2 /* MockRepoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListRouter.swift; sourceTree = "<group>"; };
+		4A86F3A821BEDB57003B6CC2 /* MockRepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListPresenter.swift; sourceTree = "<group>"; };
+		4A86F3AA21BEDC49003B6CC2 /* RepoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenterTests.swift; sourceTree = "<group>"; };
+		4A86F3AC21BEE34A003B6CC2 /* RepoListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInteractorTests.swift; sourceTree = "<group>"; };
 		4AC16B5821BB8A360012B89B /* Repository Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC16B5B21BB8A360012B89B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC16B5D21BB8A360012B89B /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
@@ -587,6 +631,114 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		4A86F37521BEB72A003B6CC2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F38B21BEC7CE003B6CC2 /* Services */,
+				4A86F37921BEBAF7003B6CC2 /* Modules */,
+				4A86F37621BEB823003B6CC2 /* NetworkMangers */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4A86F37621BEB823003B6CC2 /* NetworkMangers */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F37721BEB85E003B6CC2 /* MockNetworkManager.swift */,
+			);
+			path = NetworkMangers;
+			sourceTree = "<group>";
+		};
+		4A86F37921BEBAF7003B6CC2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F3A121BED88F003B6CC2 /* RepoList */,
+				4A86F39321BECE78003B6CC2 /* ForkList */,
+				4A86F37A21BEBB47003B6CC2 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4A86F37A21BEBB47003B6CC2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */,
+				4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */,
+				4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */,
+				4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A86F38321BEBEE8003B6CC2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F3A021BED87F003B6CC2 /* RepoList */,
+				4A86F38E21BECA79003B6CC2 /* ForkList */,
+				4A86F38421BEBEF2003B6CC2 /* Login */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		4A86F38421BEBEF2003B6CC2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */,
+				4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A86F38B21BEC7CE003B6CC2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F38C21BEC7EC003B6CC2 /* MockLoginServices.swift */,
+				4A86F38F21BECB5E003B6CC2 /* MockForkListServices.swift */,
+				4A86F39121BECD37003B6CC2 /* MockRepoListServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4A86F38E21BECA79003B6CC2 /* ForkList */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F39C21BED465003B6CC2 /* ForkListPresenterTests.swift */,
+				4A86F39E21BED6E4003B6CC2 /* ForkListInteractorTests.swift */,
+			);
+			path = ForkList;
+			sourceTree = "<group>";
+		};
+		4A86F39321BECE78003B6CC2 /* ForkList */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F39421BECE95003B6CC2 /* MockForkListPresenter.swift */,
+				4A86F39621BECFB6003B6CC2 /* MockForkListView.swift */,
+				4A86F39821BED386003B6CC2 /* MockForkListInteractor.swift */,
+				4A86F39A21BED3FC003B6CC2 /* MockForkListRouter.swift */,
+			);
+			path = ForkList;
+			sourceTree = "<group>";
+		};
+		4A86F3A021BED87F003B6CC2 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F3AA21BEDC49003B6CC2 /* RepoListPresenterTests.swift */,
+				4A86F3AC21BEE34A003B6CC2 /* RepoListInteractorTests.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		4A86F3A121BED88F003B6CC2 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				4A86F3A221BED8AB003B6CC2 /* MockRepoListView.swift */,
+				4A86F3A421BED9F8003B6CC2 /* MockRepoListInteractor.swift */,
+				4A86F3A621BEDAB7003B6CC2 /* MockRepoListRouter.swift */,
+				4A86F3A821BEDB57003B6CC2 /* MockRepoListPresenter.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
 		4AC16B4F21BB8A360012B89B = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +780,8 @@
 		4AC16B6F21BB8A390012B89B /* Repository FinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				4A86F38321BEBEE8003B6CC2 /* Tests */,
+				4A86F37521BEB72A003B6CC2 /* Mocks */,
 				4AC16B7021BB8A390012B89B /* Repository_FinderTests.swift */,
 				4AC16B7221BB8A390012B89B /* Info.plist */,
 			);
@@ -1091,7 +1245,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A86F37C21BEBB65003B6CC2 /* MockLoginView.swift in Sources */,
+				4A86F39221BECD37003B6CC2 /* MockRepoListServices.swift in Sources */,
+				4A86F3AB21BEDC49003B6CC2 /* RepoListPresenterTests.swift in Sources */,
+				4A86F39F21BED6E4003B6CC2 /* ForkListInteractorTests.swift in Sources */,
+				4A86F39521BECE95003B6CC2 /* MockForkListPresenter.swift in Sources */,
+				4A86F3AD21BEE34A003B6CC2 /* RepoListInteractorTests.swift in Sources */,
+				4A86F3A921BEDB57003B6CC2 /* MockRepoListPresenter.swift in Sources */,
+				4A86F3A321BED8AB003B6CC2 /* MockRepoListView.swift in Sources */,
+				4A86F38221BEBE19003B6CC2 /* MockLoginViewRouter.swift in Sources */,
+				4A86F38821BEBF39003B6CC2 /* LoginViewPresenterTests.swift in Sources */,
+				4A86F39721BECFB6003B6CC2 /* MockForkListView.swift in Sources */,
+				4A86F39021BECB5E003B6CC2 /* MockForkListServices.swift in Sources */,
+				4A86F38A21BEC6CB003B6CC2 /* LoginViewInteractorTests.swift in Sources */,
+				4A86F39D21BED465003B6CC2 /* ForkListPresenterTests.swift in Sources */,
+				4A86F39921BED386003B6CC2 /* MockForkListInteractor.swift in Sources */,
+				4A86F3A721BEDAB7003B6CC2 /* MockRepoListRouter.swift in Sources */,
+				4A86F38021BEBDA9003B6CC2 /* MockLoginInteractor.swift in Sources */,
+				4A86F38D21BEC7EC003B6CC2 /* MockLoginServices.swift in Sources */,
+				4A86F3A521BED9F8003B6CC2 /* MockRepoListInteractor.swift in Sources */,
 				4AC16B7121BB8A390012B89B /* Repository_FinderTests.swift in Sources */,
+				4A86F37E21BEBD12003B6CC2 /* MockLoginPresenter.swift in Sources */,
+				4A86F39B21BED3FC003B6CC2 /* MockForkListRouter.swift in Sources */,
+				4A86F37821BEB85E003B6CC2 /* MockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

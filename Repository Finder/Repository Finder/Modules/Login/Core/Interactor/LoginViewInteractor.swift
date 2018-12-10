@@ -11,7 +11,6 @@ import Foundation
 protocol LoginViewInteractor {
     var presenter : LoginViewInteractotToPresenterDelegate! { get set}
     var loginService : LoginServices{ get }
-    func authenticateUser(userName : String , password : String)
 }
 
 class LoginViewInteractorImp : LoginViewInteractor{

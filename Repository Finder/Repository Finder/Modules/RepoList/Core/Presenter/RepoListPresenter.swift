@@ -15,7 +15,7 @@ protocol RepoListPresenter {
     var router : RepoListPresenterToRouterDelagate!{ get set}
     
     var viewType : RepoListType{ get }
-    var repoListDTO : RepoListDTO? { get }
+    var repoListDTO : RepoListDTO? { get set }
     var owner : Owner?{ get }
     var totalRepositories : Int{ get }
     var perPageNumber : Int { get }
