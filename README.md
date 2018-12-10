@@ -12,3 +12,20 @@ It's an application that let user query public github repositories. It also allo
 - SDWebImageView
 - NVActivityIndicatorView
 
+## Screen Shots
+
+### Lgoin View
+![](login.png)
+
+### Search Repository View
+![](search-repo.png)
+
+### User Repository View
+![](user-repo.png)
+
+### Forks List View
+![](fork-list.png)
+
+
+
+
