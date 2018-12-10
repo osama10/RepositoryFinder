@@ -20,5 +20,13 @@ protocol LoginViewPresenterToViewDelegate : class{
 }
 
 protocol LoginViewPresenterToRouterDelegate : class{
-    func showRepoListView(with viewType : RepoListType)
+    func showRepoListView(with viewType: RepoListType, owner : Owner?)
+}
+
+protocol LoginViewPresenterToInteractorDelegate : class {
+    func makeAuthentication(userName : String, password : String)
+}
+
+protocol LoginViewInteractotToPresenterDelegate : class {
+    func didAuthenticated(loginDTO : LoginDTO)
 }

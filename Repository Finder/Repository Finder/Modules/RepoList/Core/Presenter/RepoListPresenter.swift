@@ -99,7 +99,7 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
         if(viewType == .search){
             defaultSettingForSearchFlow()
         }else {
-            defaultSettingForLoginFlow()
+            defaultSettingForUserFlow()
         }
     }
     
@@ -127,7 +127,7 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
 
     }
     
-    private func defaultSettingForLoginFlow(){
+    private func defaultSettingForUserFlow(){
         self.view.setNavBarButton(with: "Logout")
         self.view.hideSearchBar()
     }

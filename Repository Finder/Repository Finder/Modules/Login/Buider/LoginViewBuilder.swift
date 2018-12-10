@@ -14,19 +14,23 @@ protocol LoginViewBuilder {
 }
 
 class LoginViewBuilderImp : LoginViewBuilder{
-    var presenter : (LoginViewPresenter & LoginViewViewToPresenterDelegate)!
+   
+    var presenter : (LoginViewPresenter & LoginViewViewToPresenterDelegate & LoginViewInteractotToPresenterDelegate)!
     var view : (LoginViewController & LoginViewPresenterToViewDelegate)!
     var router : (LoginViewPresenterToRouterDelegate)!
+    var interactor : (LoginViewInteractor & LoginViewPresenterToInteractorDelegate)!
     
     func build(router : LoginViewPresenterToRouterDelegate)->UIViewController{
         registerView()
+        registerInteractor()
         registerRouter(router: router)
         registerPresenter()
         
         presenter.view = view
         view.presenter = presenter
         presenter.router = self.router
-        
+        presenter.interactor = interactor
+        interactor.presenter = presenter
         return view
     }
     
@@ -41,5 +45,12 @@ class LoginViewBuilderImp : LoginViewBuilder{
     private func registerRouter(router : LoginViewPresenterToRouterDelegate){
         self.router = router
     }
+    
+    private func registerInteractor(){
+        let loginService = LoginServiceImp(networkManager: AlamofireManager.shared)
+        self.interactor = LoginViewInteractorImp(loginService: loginService)
+    }
+    
+    
     
 }

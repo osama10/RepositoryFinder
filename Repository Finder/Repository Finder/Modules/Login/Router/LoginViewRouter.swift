@@ -28,9 +28,10 @@ class LoginViewRouterImp : LoginViewRouter{
 }
 
 extension LoginViewRouterImp : LoginViewPresenterToRouterDelegate{
-    func showRepoListView(with viewType: RepoListType) {
+   
+    func showRepoListView(with viewType: RepoListType, owner : Owner?) {
         let repoListBuilder : RepoListBuilder = RepoListBuilderImp()
-        let repoListVC = repoListBuilder.build(with: viewType)
+        let repoListVC = repoListBuilder.build(with: viewType, owner: owner)
         self.navigationController = UINavigationController(rootViewController: repoListVC)
         self.navigationController.makeDefaultSettings()
         self.loginViewController.present(self.navigationController, animated: true, completion: nil)

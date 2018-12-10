@@ -237,6 +237,11 @@ extension String {
     var toDouble : Double {
         return Double(self) ?? 0.0
     }
+    
+     func isBlank() -> Bool {
+        let trimmed = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        return trimmed.isEmpty
+    }
 }
 
 

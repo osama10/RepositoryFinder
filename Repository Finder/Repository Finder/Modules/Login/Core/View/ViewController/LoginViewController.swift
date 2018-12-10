@@ -21,19 +21,13 @@ class LoginViewController: UIViewController, AlertsPresentable,NVActivityIndicat
         self.hideKeyboardWhenTappedAround()
         self.userNameTextField.delegate = self
         self.passwordTextField.delegate = self
-
     }
 
     @IBAction func didTapOnLoginButton(_ sender: UIButton) {
         guard let userName = self.userNameTextField.text else { return }
         guard let password = self.passwordTextField.text else { return }
-        
-        if(!(userName.isEmpty || password.isEmpty)){
-            self.presenter.didTapOnLogin(userName: userName, password: password)
-            print("did tap on login")
-
-        }
-    }
+        self.presenter.didTapOnLogin(userName: userName, password: password)
+}
     
     @IBAction func didTapOnSearchRepositoriesButton(_ sender: UIButton) {
         self.presenter.didTapOnSearchRepositories()
