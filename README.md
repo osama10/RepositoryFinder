@@ -26,6 +26,5 @@ It's an application that let user query public github repositories. It also allo
 ## Forks List View
 ![](fork-list.png)
 
-
-
+In case of any query feel free to contact @ osama.binbashir@yahoo.com
 
