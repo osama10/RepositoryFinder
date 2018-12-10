@@ -73,7 +73,6 @@
 		4AC16B6121BB8A360012B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B5F21BB8A360012B89B /* Main.storyboard */; };
 		4AC16B6321BB8A390012B89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B6221BB8A390012B89B /* Assets.xcassets */; };
 		4AC16B6621BB8A390012B89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC16B6421BB8A390012B89B /* LaunchScreen.storyboard */; };
-		4AC16B7121BB8A390012B89B /* Repository_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B7021BB8A390012B89B /* Repository_FinderTests.swift */; };
 		4AC16B7F21BB8D5B0012B89B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B7E21BB8D5B0012B89B /* Constants.swift */; };
 		4AC16B8221BB8DB10012B89B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B8121BB8DB10012B89B /* Singleton.swift */; };
 		4AC16B8621BB8E3A0012B89B /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16B8521BB8E3A0012B89B /* DTO.swift */; };
@@ -189,7 +188,6 @@
 		4AC16B6521BB8A390012B89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AC16B6721BB8A390012B89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC16B6C21BB8A390012B89B /* Repository FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repository FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AC16B7021BB8A390012B89B /* Repository_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository_FinderTests.swift; sourceTree = "<group>"; };
 		4AC16B7221BB8A390012B89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC16B7E21BB8D5B0012B89B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4AC16B8121BB8DB10012B89B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -782,7 +780,6 @@
 			children = (
 				4A86F38321BEBEE8003B6CC2 /* Tests */,
 				4A86F37521BEB72A003B6CC2 /* Mocks */,
-				4AC16B7021BB8A390012B89B /* Repository_FinderTests.swift */,
 				4AC16B7221BB8A390012B89B /* Info.plist */,
 			);
 			path = "Repository FinderTests";
@@ -1264,7 +1261,6 @@
 				4A86F38021BEBDA9003B6CC2 /* MockLoginInteractor.swift in Sources */,
 				4A86F38D21BEC7EC003B6CC2 /* MockLoginServices.swift in Sources */,
 				4A86F3A521BED9F8003B6CC2 /* MockRepoListInteractor.swift in Sources */,
-				4AC16B7121BB8A390012B89B /* Repository_FinderTests.swift in Sources */,
 				4A86F37E21BEBD12003B6CC2 /* MockLoginPresenter.swift in Sources */,
 				4A86F39B21BED3FC003B6CC2 /* MockForkListRouter.swift in Sources */,
 				4A86F37821BEB85E003B6CC2 /* MockNetworkManager.swift in Sources */,
