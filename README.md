@@ -14,16 +14,16 @@ It's an application that let user query public github repositories. It also allo
 
 ## Screen Shots
 
-### Lgoin View
+## Lgoin View
 ![](login.png)
 
-### Search Repository View
+## Search Repository View
 ![](search-repo.png)
 
-### User Repository View
+## User Repository View
 ![](user-repo.png)
 
-### Forks List View
+## Forks List View
 ![](fork-list.png)
 
 
