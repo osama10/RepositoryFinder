@@ -8,16 +8,17 @@
 
 import UIKit
 import NVActivityIndicatorView
-class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable {
+class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable,KeyboarHideAbleView {
     
     @IBOutlet weak var searchViewContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nothingFoundContainerView: UIView!
     
+    @IBOutlet weak var searchViewHeightConstraint: NSLayoutConstraint!
     weak var searchView : SearchView!
     weak var nothingFoundView : NothingFoundView!
     
-    var presenter : (RepoListPresenter & RepoLisViewToPresenterDelegate & RepoListInteractorToPresenterDelegate)!
+    var presenter : (RepoListPresenter & RepoLisViewToPresenterDelegate)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,9 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         self.addNothingFoundView()
         self.setLogo()
         self.nothingFoundContainerView.isHidden = true
+        self.hideKeyboardWhenTappedAround()
+        self.searchView.searchTextField.delegate = self
+        
     }
     
     private func setLogo(){
@@ -40,6 +44,11 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         navigationItem.titleView = imageView
+    }
+    
+    private func setNavigationBarButton(with title : String){
+        let dismissButton = UIBarButtonItem(title: title, style: .plain, target: self, action:#selector(dissmissVC))
+        self.navigationItem.leftBarButtonItem = dismissButton
     }
     
     private func setupTableView(){
@@ -69,6 +78,19 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         nothingFoundContainerView.addSubview(nothingFoundView)
     }
     
+    
+    @objc func dissmissVC(){
+        self.presenter.didTapOnDismissButton()
+    }
+    
+   
+}
+
+extension RepoListViewController : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
+    }
     
     
 }
@@ -136,7 +158,14 @@ extension RepoListViewController : RepoListPresenterToViewDelegate{
         self.showAlert(with: title, and: message)
     }
     
+    func setNavBarButton(with title: String) {
+        self.setNavigationBarButton(with: title)
+    }
     
+    func hideSearchBar() {
+        self.searchViewContainerView.isHidden = true
+        self.searchViewHeightConstraint.constant = 0
+    }
 }
 
 

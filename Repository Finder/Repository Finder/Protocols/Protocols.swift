@@ -18,4 +18,5 @@ protocol StoryboardInitializable {
     static func instantiateViewController() -> UIViewController
 }
 
+@objc protocol KeyboarHideAbleView : class{}
 

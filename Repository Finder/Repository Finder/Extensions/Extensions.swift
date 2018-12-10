@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-protocol BaseRouter {}
-
 extension UIStoryboard {
     
     enum Storyboard: String {
@@ -201,12 +199,25 @@ extension AlertsPresentable where Self : UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
+        
         present(alertController, animated: true, completion: nil)
         
     }
 
 }
 
+extension UIViewController{
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+   
+}
 extension Int{
     
     var toString: String{

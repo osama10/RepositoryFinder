@@ -96,7 +96,14 @@ class RepoListPresenterImp : RepoListPresenter{
 extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     func viewDidLoad() {
         
+        if(viewType == .search){
+            defaultSettingForSearchFlow()
+        }else {
+            defaultSettingForLoginFlow()
+        }
     }
+    
+    
     
     func search(queryString: String) {
         self.page = 1
@@ -109,6 +116,20 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     
     func didTapOnRow(with index: Int) {
         self.didTapOnRowHandler(with: index)
+    }
+    
+    func didTapOnDismissButton() {
+        self.router.dismissForkList()
+    }
+    
+    private func defaultSettingForSearchFlow(){
+        self.view.setNavBarButton(with: "Login")
+
+    }
+    
+    private func defaultSettingForLoginFlow(){
+        self.view.setNavBarButton(with: "Logout")
+        self.view.hideSearchBar()
     }
     
     private func didTapOnRowHandler(with index : Int){
@@ -146,7 +167,7 @@ extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{
     
     private func didRepositoriesFetchedHandler(repoListDTO: RepoListDTO){
         self.view.stopAnimatingLoader()
-
+        
         if(repoListDTO.isError){
             self.repositoriesFetchedErrorHandler(errorMessage: repoListDTO.errorMessage)
         }else {

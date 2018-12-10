@@ -32,7 +32,7 @@ class ForkListPresenterImp : ForkListPresenter{
     
     weak var view: ForkListPresenterToViewDelegate!
     var interactor: ForkListPresenterToInteractorDelegate!
-    weak var router: ForkListPresenterToRouterDelagate!
+    var router: ForkListPresenterToRouterDelagate!
     
     var userName: String
     var repoName: String
