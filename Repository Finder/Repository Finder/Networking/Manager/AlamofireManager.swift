@@ -26,8 +26,8 @@ final class AlamofireManager : NetworkManager{
             )
             .responseData
             { (response) in
-                
-                if !(200...209).contains(response.response!.statusCode) {
+               
+                if let responseCode = response.response?.statusCode, !(200..<209).contains(responseCode) {
                     if let data = response.data {
                         do {
                             let decoder = JSONDecoder()

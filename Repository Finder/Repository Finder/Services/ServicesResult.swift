@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum RepoListResult<V>{
+enum ServicesResult<V>{
     case success(V)
     case error(String)
 }

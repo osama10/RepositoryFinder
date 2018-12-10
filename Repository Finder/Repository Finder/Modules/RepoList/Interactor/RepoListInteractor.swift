@@ -16,8 +16,11 @@ protocol RepoListInteractor {
 }
 
 class RepoListInteractorImp : RepoListInteractor{
+    
     var repoListServices: RepoListServices
+    
     weak var presenter: RepoListInteractorToPresenterDelegate!
+   
     var page : Int = 0
     var perPageNumber = 0
     
@@ -41,7 +44,7 @@ class RepoListInteractorImp : RepoListInteractor{
         }
     }
     
-    private func preapreDataFromUserRepoRequest(result : RepoListResult<Array<Repository>>)->RepoListDTO{
+    private func preapreDataFromUserRepoRequest(result : ServicesResult<Array<Repository>>)->RepoListDTO{
         var repoListDTO : RepoListDTO!
         switch result {
         case .success(let data):
@@ -53,7 +56,7 @@ class RepoListInteractorImp : RepoListInteractor{
         return repoListDTO
     }
     
-    private func preapreDataFromSearchRepoRequest(result : RepoListResult<RepoListResponse>)->RepoListDTO{
+    private func preapreDataFromSearchRepoRequest(result : ServicesResult<RepoListResponse>)->RepoListDTO{
         var repoListDTO : RepoListDTO!
         switch result {
         case .success(let data):

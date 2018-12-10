@@ -11,4 +11,4 @@ import Foundation
 let somethingUnexpectedError = "Something unexpected happen. Please try later"
 let serverNotRespondingError = "Server not responding. Please try again later"
 let badDataError = "Data couldn't be fetched properly"
-let userName = ""
+let noForksMessage = "No forks available for this repo"

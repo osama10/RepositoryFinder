@@ -9,6 +9,42 @@
 import Foundation
 import UIKit
 
+protocol BaseRouter {}
+
+extension UIStoryboard {
+    
+    enum Storyboard: String {
+        case main
+        var filename: String {
+            return rawValue.capitalized
+        }
+    }
+    
+    class func storyboard(storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
+        return UIStoryboard(name: storyboard.filename, bundle: bundle)
+    }
+    
+}
+
+extension StoryboardInitializable {
+    /**
+     define in protocol file
+     
+     */
+    
+    static var storyboardIdentifier: String {
+        return String(describing: self)
+    }
+    
+    static var storyboardName: UIStoryboard.Storyboard {
+        return UIStoryboard.Storyboard.main
+    }
+    static func instantiateViewController() -> UIViewController {
+        let storyboard = UIStoryboard.storyboard(storyboard: storyboardName)
+        return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)
+        
+    }
+}
 
 
 extension ReusableView where Self : UIView {
@@ -31,12 +67,21 @@ extension NibLoadableView where Self : UIView {
 extension UIColor {
     
     public static var backgroundColor : UIColor{
-        return UIColor(red:234/255, green:238/255, blue:239/255, alpha:1)
+        return UIColor(red:234/255, green:234/255, blue:234/255, alpha:1.0)
     }
+    
     
 }
 
-
+extension UINavigationController{
+    func makeDefaultSettings(){
+        self.navigationBar.barTintColor = .black
+        self.navigationBar.backgroundColor = .black
+        self.navigationBar.tintColor = .white
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        self.navigationBar.titleTextAttributes = textAttributes
+    }
+}
 extension UITableView {
     func register<T:UITableViewCell>(_ : T.Type) where T : ReusableView & NibLoadableView{
         let nib = UINib(nibName: T.nibName, bundle: nil)
@@ -138,8 +183,18 @@ extension UITextField {
     }
 }
 
-
-
+extension UIImageView{
+    func setAvatarImage(imageURL : String?){
+        guard let url = imageURL else {
+            self.image = UIImage(named: "no-image")
+            return
+        }
+        
+        self.sd_setShowActivityIndicatorView(true)
+        self.sd_setIndicatorStyle(.gray)
+        self.sd_setImage(with: URL(string:url ))
+    }
+}
 extension AlertsPresentable where Self : UIViewController {
     
     func showAlert(with title: String? = nil , and message: String? = nil){
@@ -157,6 +212,9 @@ extension Int{
     var toString: String{
         return String(self)
     }
+    var toCGFloat : CGFloat{
+        return CGFloat(self)
+    }
 }
 
 extension Double{
@@ -169,3 +227,5 @@ extension String {
         return Double(self) ?? 0.0
     }
 }
+
+

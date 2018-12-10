@@ -28,8 +28,8 @@ protocol RepoListPresenterToInteractorDelegate : class {
     func fetchSearchRepositories(queryString : String, page : Int, perPageNumber : Int)
 }
 
-protocol PresenterToRouterDelagate : class{
-    
+protocol RepoListPresenterToRouterDelagate : class{
+    func pushToForkScreen(repository : String, userName : String, totalForks : Int)
 }
 
 protocol RepoListInteractorToPresenterDelegate : class{
@@ -37,6 +37,6 @@ protocol RepoListInteractorToPresenterDelegate : class{
 }
 
 
-protocol RouterToPresenterDelegate : class{
+protocol RepoListRouterToPresenterDelegate : class{
     
 }

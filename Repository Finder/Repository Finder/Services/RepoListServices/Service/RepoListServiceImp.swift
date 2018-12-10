@@ -8,8 +8,8 @@
 
 import Foundation
 
-typealias SearchRepoCompletion = ((RepoListResult<RepoListResponse>) -> Void)
-typealias UserRepoCompletion = ((RepoListResult<Array<Repository>>) -> Void)
+typealias SearchRepoCompletion = ((ServicesResult<RepoListResponse>) -> Void)
+typealias UserRepoCompletion = ((ServicesResult<Array<Repository>>) -> Void)
 
 final class RepoListServicesImp : RepoListServices{
     var networkManager: NetworkManager
@@ -41,9 +41,9 @@ final class RepoListServicesImp : RepoListServices{
         }
     }
     
-    private func parseSearchResult(result : NetworkResult<RepoListResponse, RequestError, NetworkError>)->RepoListResult<RepoListResponse>{
+    private func parseSearchResult(result : NetworkResult<RepoListResponse, RequestError, NetworkError>)->ServicesResult<RepoListResponse>{
        
-        var repoResult : RepoListResult<RepoListResponse>!
+        var repoResult : ServicesResult<RepoListResponse>!
         
         switch result{
         case .success(let data):
@@ -56,9 +56,9 @@ final class RepoListServicesImp : RepoListServices{
         return repoResult
     }
     
-    private func parseUserResult(result : NetworkResult<Array<Repository>, RequestError, NetworkError>)->RepoListResult<Array<Repository>>{
+    private func parseUserResult(result : NetworkResult<Array<Repository>, RequestError, NetworkError>)->ServicesResult<Array<Repository>>{
         
-        var repoResult : RepoListResult<Array<Repository>>!
+        var repoResult : ServicesResult<Array<Repository>>!
         
         switch result{
         case .success(let data):

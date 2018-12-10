@@ -12,5 +12,10 @@ import UIKit
 protocol ReusableView : class {  static var reuseIdentifier : String {get} }
 protocol AlertsPresentable : class {}
 protocol NibLoadableView : class { static var nibName : String {get} }
+protocol StoryboardInitializable {
+    static var storyboardIdentifier: String { get }
+    static var storyboardName: UIStoryboard.Storyboard { get }
+    static func instantiateViewController() -> UIViewController
+}
 
 

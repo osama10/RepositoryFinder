@@ -36,21 +36,21 @@ class RepoListTableViewCell: UITableViewCell,NibLoadableView, ReusableView {
     
     func setData(repository : Repository){
         let imageUrl = repository.owner?.avatarURL
-        self.setAvatarImage(imageURL: imageUrl)
+        self.avatarImageView.setAvatarImage(imageURL: imageUrl)
         self.repoTitleLabel.text = repository.name ?? "Repository name not found"
         self.repoDetailLabel.text = repository.description ?? "No description"
         self.forkLabel.text = (repository.forks ?? 0).toString
         self.wathcersLabel.text = (repository.watchers ?? 0).toString
     }
     
-    private func setAvatarImage(imageURL : String?){
-        guard let url = imageURL else {
-            self.avatarImageView.image = UIImage(named: "no-image")
-            return
-        }
-        
-        self.avatarImageView.sd_setShowActivityIndicatorView(true)
-        self.avatarImageView.sd_setIndicatorStyle(.gray)
-        self.avatarImageView.sd_setImage(with: URL(string:url ))
-    }
+//    private func setAvatarImage(imageURL : String?){
+//        guard let url = imageURL else {
+//            self.avatarImageView.image = UIImage(named: "no-image")
+//            return
+//        }
+//
+//        self.avatarImageView.sd_setShowActivityIndicatorView(true)
+//        self.avatarImageView.sd_setIndicatorStyle(.gray)
+//        self.avatarImageView.sd_setImage(with: URL(string:url ))
+//    }
 }

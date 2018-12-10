@@ -12,6 +12,8 @@ protocol RepoListPresenter {
     
     var view : PresenterToViewDelegate!{ get }
     var interactor : RepoListPresenterToInteractorDelegate!{ get set }
+    var router : RepoListPresenterToRouterDelagate!{ get set}
+    
     var viewType : RepoListType{ get }
     var repoListDTO : RepoListDTO? { get }
     var owner : Owner?{ get }
@@ -30,6 +32,8 @@ class RepoListPresenterImp : RepoListPresenter{
     
     weak var view: PresenterToViewDelegate!
     var interactor: RepoListPresenterToInteractorDelegate!
+    var router: RepoListPresenterToRouterDelagate!
+    
     var owner: Owner?
     var viewType: RepoListType
     var repoListDTO: RepoListDTO?
@@ -64,16 +68,13 @@ class RepoListPresenterImp : RepoListPresenter{
     }
     
     func willShowMore() -> Bool {
-        guard let repoListDTO = self.repoListDTO else {
-            return false
-        }
+        guard let repoListDTO = self.repoListDTO else { return false }
         return repoListDTO.showMore
-        
     }
     
     func getRepository(at index: Int) -> Repository {
-        
         return repoListDTO!.repositories[index]
+        
     }
     
     private func getRepositories(){
@@ -81,6 +82,7 @@ class RepoListPresenterImp : RepoListPresenter{
             guard let userName = owner?.login else {
                 self.view.showErrorAlert(with: "Error", message:somethingUnexpectedError )
                 return
+                
             }
             self.interactor.fetchUserRepositories(userName: userName)
         }
@@ -93,7 +95,7 @@ class RepoListPresenterImp : RepoListPresenter{
 
 extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     func viewDidLoad() {
-      
+        
     }
     
     func search(queryString: String) {
@@ -106,37 +108,79 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     }
     
     func didTapOnRow(with index: Int) {
-        guard let showMore = self.repoListDTO?.showMore else { return }
-        
-        if(showMore && index == self.repoListDTO?.repositories.count){
-            self.page = self.page + 1
-            self.view.startAnimatingLoader()
-            self.getSearchRespositories(queryString: self.queryString, page: self.page, perPageNumber: self.perPageNumber)
-            
+        self.didTapOnRowHandler(with: index)
+    }
+    
+    private func didTapOnRowHandler(with index : Int){
+        if(index == (self.repoListDTO?.repositories.count)!){
+            self.showMoreRepositories()
+        }else {
+            self.showrForksViewHandler(of: index)
         }
+    }
+    
+    private func showrForksViewHandler(of index : Int){
+        let numberOfForks = self.repoListDTO?.repositories[index].forks ?? 0
+        if(numberOfForks > 0){
+            let userName = self.repoListDTO?.repositories[index].owner?.login ?? ""
+            let repoName = self.repoListDTO?.repositories[index].name ?? ""
+            self.router.pushToForkScreen(repository: repoName, userName: userName, totalForks: numberOfForks)
+        }else{
+            self.view.showErrorAlert(with: noForksMessage, message: "")
+        }
+    }
+    
+    private func showMoreRepositories(){
+        self.page = self.page + 1
+        self.view.startAnimatingLoader()
+        self.getSearchRespositories(queryString: self.queryString, page: self.page, perPageNumber: self.perPageNumber)
     }
     
 }
 
 extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{
+    
     func didRepositoriesFetched(repoListDTO: RepoListDTO) {
-       
-        if(self.willShowMore()){
-            var repositories =  self.repoListDTO?.repositories
-            repositories!.append(contentsOf: repoListDTO.repositories)
-            self.repoListDTO = repoListDTO
-            self.repoListDTO?.repositories = repositories!
-        }else{
-            self.repoListDTO = repoListDTO
-            if((self.repoListDTO?.repositories.count)! <= 0){
-                self.view.showNoResultFoundAlert()
-            }
-        }
-        
+        self.didRepositoriesFetchedHandler(repoListDTO: repoListDTO)
+    }
+    
+    private func didRepositoriesFetchedHandler(repoListDTO: RepoListDTO){
         self.view.stopAnimatingLoader()
+
+        if(repoListDTO.isError){
+            self.repositoriesFetchedErrorHandler(errorMessage: repoListDTO.errorMessage)
+        }else {
+            self.repositoriesFetchedSuccessfullHandler(repoListDTO: repoListDTO)
+        }
+    }
+    
+    private func repositoriesFetchedErrorHandler(errorMessage : String){
+        self.view.showErrorAlert(with: "Request Failed", message: errorMessage)
+    }
+    
+    
+    private func repositoriesFetchedSuccessfullHandler(repoListDTO: RepoListDTO){
+        if(self.willShowMore()){
+            self.didRepositoriesFetchedwillShowMoreHandler(repoListDTO: repoListDTO)
+        }else{
+            self.didRepositoriesFetchedNormalFlowHandler(repoListDTO: repoListDTO)
+        }
         self.view.reloadData()
-       
-       
+    }
+    
+    private func didRepositoriesFetchedwillShowMoreHandler(repoListDTO: RepoListDTO){
+        
+        var repositories =  self.repoListDTO?.repositories
+        repositories!.append(contentsOf: repoListDTO.repositories)
+        self.repoListDTO = repoListDTO
+        self.repoListDTO?.repositories = repositories!
+    }
+    
+    private func didRepositoriesFetchedNormalFlowHandler(repoListDTO: RepoListDTO){
+        self.repoListDTO = repoListDTO
+        if((self.repoListDTO?.repositories.count)! <= 0){
+            self.view.showNoResultFoundAlert()
+        }
     }
 }
 

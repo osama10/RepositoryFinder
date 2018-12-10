@@ -11,7 +11,6 @@ import NVActivityIndicatorView
 class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable {
     
     @IBOutlet weak var searchViewContainerView: UIView!
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nothingFoundContainerView: UIView!
     
@@ -23,16 +22,6 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSettings()
-        
-        let services = RepoListServicesImp(networkManager: AlamofireManager.shared)
-        
-        var interactor : RepoListPresenterToInteractorDelegate & RepoListInteractor = RepoListInteractorImp(repoListServices: services)
-        
-        presenter = RepoListPresenterImp(view: self, viewType: .search)
-        presenter.interactor = interactor
-        
-        interactor.presenter = presenter
-        
         presenter.viewDidLoad()
     }
     
