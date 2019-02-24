@@ -1,6 +1,5 @@
 # RepositoryFinder
-An application that queries repos over github
-
+Example project for the implementation of VIPER-B in iOS Swift. It's an application that uses github apis to get repos details. You can also login to your Github account and check you repos.
 ## How to run project
 This project was developed on **Xcode 9.4** using **Swift 4.1** . Please run **pod install** after cloning the repo and checking out to master for running the project.
 
