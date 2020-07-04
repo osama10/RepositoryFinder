@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035AE92424B0CC9A007E5775 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */; };
 		4A86F2F521BC4EA3003B6CC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F421BC4EA3003B6CC2 /* Repository.swift */; };
 		4A86F2F721BC5197003B6CC2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2F621BC5197003B6CC2 /* Owner.swift */; };
 		4A86F2FC21BC5239003B6CC2 /* RepoListSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F2FB21BC5239003B6CC2 /* RepoListSearchRequest.swift */; };
@@ -118,6 +119,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
 		0757DF11F998307046B1B9B9 /* Pods-Repository Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder.release.xcconfig"; sourceTree = "<group>"; };
 		4A86F2F421BC4EA3003B6CC2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		4A86F2F621BC5197003B6CC2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -863,6 +865,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC16B9F21BB97170012B89B /* Extensions.swift */,
+				035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1126,21 +1129,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Repository Finder/Pods-Repository Finder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95BF21C00E1CCF5955FE5470 /* [CP] Check Pods Manifest.lock */ = {
@@ -1194,6 +1192,7 @@
 				4A86F32B21BD83F9003B6CC2 /* ForkListDTO.swift in Sources */,
 				4AC16BA521BB97880012B89B /* HTTPMethods.swift in Sources */,
 				4A86F35B21BE66A7003B6CC2 /* LoginViewPresenter.swift in Sources */,
+				035AE92424B0CC9A007E5775 /* Storyboard+Extensions.swift in Sources */,
 				4A86F33221BD86A7003B6CC2 /* ForkListEndpointProvider.swift in Sources */,
 				4A86F33421BD8880003B6CC2 /* ForkListServices.swift in Sources */,
 				4AC16B8A21BB8E7B0012B89B /* EndpointProvider.swift in Sources */,

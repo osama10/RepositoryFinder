@@ -35,11 +35,3 @@ extension RepoListRouterImp : RepoListPresenterToRouterDelagate{
         self.repoListViewController.dismiss(animated: true, completion: nil)
     }
 }
-
-
-extension RepoListRouterImp : StoryboardInitializable {
-    static var storyboardName: UIStoryboard.Storyboard {
-        return .main
-    }
-}
-

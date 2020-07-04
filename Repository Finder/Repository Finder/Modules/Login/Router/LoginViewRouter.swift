@@ -37,9 +37,3 @@ extension LoginViewRouterImp : LoginViewPresenterToRouterDelegate{
         self.loginViewController.present(self.navigationController, animated: true, completion: nil)
     }
 }
-
-extension LoginViewRouterImp : StoryboardInitializable {
-    static var storyboardName: UIStoryboard.Storyboard {
-        return .main
-    }
-}

@@ -41,7 +41,7 @@ class RepoListBuilderImp : RepoListBuilder{
     }
     
     private func registerView(){
-        let repoViewController = RepoListRouterImp.instantiateViewController() as! RepoListViewController
+        let repoViewController: RepoListViewController = UIStoryboard(storyboard: .main).instantiateViewController()
         self.view = repoViewController
         
     }

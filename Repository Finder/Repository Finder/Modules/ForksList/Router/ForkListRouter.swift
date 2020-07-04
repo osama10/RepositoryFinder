@@ -21,9 +21,4 @@ extension ForkListRouterImp : ForkListPresenterToRouterDelagate{
     
 }
 
-extension ForkListRouterImp : StoryboardInitializable {
-    static var storyboardName: UIStoryboard.Storyboard {
-        return .main
-    }
-}
 

@@ -35,7 +35,7 @@ class LoginViewBuilderImp : LoginViewBuilder{
     }
     
     private func registerView(){
-        self.view = LoginViewRouterImp.instantiateViewController() as! LoginViewController
+        self.view = UIStoryboard(storyboard: .main).initialViewController() as! LoginViewController
     }
     
     private func registerPresenter(){

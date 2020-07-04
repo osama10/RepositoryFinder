@@ -13,7 +13,7 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - NVActivityIndicatorView
     - SDWebImage
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: c02419f30e0d4a8e870093f3f7d36b1133f68ffa
+PODFILE CHECKSUM: cfe7a89a6ce8407dd0409681bcbe906d8ecf12aa
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3
