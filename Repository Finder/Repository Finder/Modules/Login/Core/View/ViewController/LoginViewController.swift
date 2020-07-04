@@ -8,37 +8,38 @@
 
 import UIKit
 import NVActivityIndicatorView
+
 class LoginViewController: UIViewController, AlertsPresentable,NVActivityIndicatorViewable {
+
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var searchRepositoriesButton: UIButton!
     
-     var presenter : LoginViewViewToPresenterDelegate!
+    var presenter : LoginViewViewToPresenterDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        self.userNameTextField.delegate = self
-        self.passwordTextField.delegate = self
+        hideKeyboardWhenTappedAround()
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     @IBAction func didTapOnLoginButton(_ sender: UIButton) {
-        guard let userName = self.userNameTextField.text else { return }
-        guard let password = self.passwordTextField.text else { return }
-        self.presenter.didTapOnLogin(userName: userName, password: password)
-}
-    
-    @IBAction func didTapOnSearchRepositoriesButton(_ sender: UIButton) {
-        self.presenter.didTapOnSearchRepositories()
+        guard let userName = userNameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        presenter.didTapOnLogin(userName: userName, password: password)
     }
     
+    @IBAction func didTapOnSearchRepositoriesButton(_ sender: UIButton) {
+        presenter.didTapOnSearchRepositories()
+    }
     
 }
 
 extension LoginViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+        view.endEditing(true)
         return false
     }
 
@@ -46,20 +47,20 @@ extension LoginViewController : UITextFieldDelegate{
 
 extension LoginViewController : LoginViewPresenterToViewDelegate{
     func startAnimatingLoader() {
-        self.startAnimating()
+        startAnimating()
     }
     
     func stopAnimatingLoader() {
-        self.stopAnimating()
+        stopAnimating()
     }
     
     func showErrorAlert(with title: String, message: String) {
-        self.showAlert(with: title, and: message)
+        showAlert(with: title, and: message)
     }
     
     func emptyTextFields() {
-        self.userNameTextField.text = ""
-        self.passwordTextField.text = ""
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
     
 }

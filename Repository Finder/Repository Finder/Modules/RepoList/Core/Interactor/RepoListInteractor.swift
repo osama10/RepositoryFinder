@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 protocol RepoListInteractor {
     var repoListServices : RepoListServices{ get }
     var presenter : RepoListInteractorToPresenterDelegate!{ get set}
@@ -24,6 +22,7 @@ class RepoListInteractorImp : RepoListInteractor{
     var page : Int = 0
     var perPageNumber = 0
     var userTotalRepo = 0
+
     init(repoListServices : RepoListServices) {
         self.repoListServices = repoListServices
     }
@@ -54,11 +53,14 @@ class RepoListInteractorImp : RepoListInteractor{
             repoListDTO = RepoListDTO(repositories: [], isError: true, errorMessage: errorMessage, showMore: false)
             
         }
+
         return repoListDTO
     }
     
-    private func preapreDataFromSearchRepoRequest(result : ServicesResult<RepoListResponse>)->RepoListDTO{
+    private func preapreDataFromSearchRepoRequest(result : ServicesResult<RepoListResponse>) -> RepoListDTO{
+
         var repoListDTO : RepoListDTO!
+
         switch result {
         case .success(let data):
             let shouldShowMore = ((self.perPageNumber) * self.page < data.totalCount) ? true : false
@@ -67,6 +69,7 @@ class RepoListInteractorImp : RepoListInteractor{
             repoListDTO = RepoListDTO(repositories: [], isError: true, errorMessage: errorMessage, showMore: false)
             
         }
+
         return repoListDTO
     }
     
@@ -86,7 +89,6 @@ extension RepoListInteractorImp : RepoListPresenterToInteractorDelegate{
         self.perPageNumber = perPageNumber
         self.getSearchRepositories(queryString: queryString, page: page, perPageNumber: perPageNumber)
     }
-    
     
 }
 

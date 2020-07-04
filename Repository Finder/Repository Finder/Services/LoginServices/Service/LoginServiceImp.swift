@@ -41,9 +41,7 @@ final class LoginServiceImp : LoginServices{
         return repoResult
     }
     
-    
-    
-    private func parseNetworkError(error : NetworkError)->String{
+    private func parseNetworkError(error : NetworkError) -> String {
         var errorString = ""
         switch error {
         case .requestCreation(let badRequest):

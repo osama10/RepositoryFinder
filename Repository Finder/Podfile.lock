@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (4.7.3)
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
@@ -9,20 +14,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - iOSSnapshotTestCase
   - NVActivityIndicatorView
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
+    - iOSSnapshotTestCase
     - NVActivityIndicatorView
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: c02419f30e0d4a8e870093f3f7d36b1133f68ffa
+PODFILE CHECKSUM: 0fbb47074cbdf0543f62b0631696bc232dfd74ac
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

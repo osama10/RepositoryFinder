@@ -100,7 +100,8 @@ class Utils {
         view.layer.cornerRadius = cornerRadius
         
     }
-    class func printlocalDbUrl(){
+
+    class func printlocalDbUrl() {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print("LOCAL DB URL : \(urls[urls.count-1] as URL)")
     }
@@ -115,9 +116,7 @@ class Utils {
         
     }
     
-    
     class func convertImageToBase64(image: UIImage) -> String {
-        //        let imageData = UIImagePNGRepresentation(image)!
         let imageData = UIImageJPEGRepresentation(image, 0.5)
         return imageData!.base64EncodedString()
     }

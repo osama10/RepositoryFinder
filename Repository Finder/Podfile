@@ -3,6 +3,11 @@ target 'Repository Finder' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'SDWebImage', '~> 4.0'
-    pod 'NVActivityIndicatorView'
+  pod 'NVActivityIndicatorView'
+
+  target 'Repository FinderTests' do
+    inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
+  end
 
 end
