@@ -261,6 +261,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032AC60524B0E53200FACEAD /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16BF721BC09CA0012B89B /* SearchView.xib */,
+				4AC16BF921BC0A480012B89B /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		032AC60624B0E54000FACEAD /* ShowmoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */,
+				4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */,
+			);
+			path = ShowmoreCell;
+			sourceTree = "<group>";
+		};
+		032AC60724B0E55400FACEAD /* NothingFoundView */ = {
+			isa = PBXGroup;
+			children = (
+				4AC16C1821BC37510012B89B /* NothingFoundView.xib */,
+				4AC16C1621BC37350012B89B /* NothingFoundView.swift */,
+			);
+			path = NothingFoundView;
+			sourceTree = "<group>";
+		};
 		035AE92524B0D0BF007E5775 /* AppStartup */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,12 +1004,9 @@
 		4AC16BFB21BC10500012B89B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4AC16BF721BC09CA0012B89B /* SearchView.xib */,
-				4AC16BF921BC0A480012B89B /* SearchView.swift */,
-				4AC16C0A21BC24E60012B89B /* ShowMoreTableViewCell.xib */,
-				4AC16C0921BC24E60012B89B /* ShowMoreTableViewCell.swift */,
-				4AC16C1821BC37510012B89B /* NothingFoundView.xib */,
-				4AC16C1621BC37350012B89B /* NothingFoundView.swift */,
+				032AC60724B0E55400FACEAD /* NothingFoundView */,
+				032AC60624B0E54000FACEAD /* ShowmoreCell */,
+				032AC60524B0E53200FACEAD /* SearchView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
