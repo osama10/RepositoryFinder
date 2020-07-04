@@ -43,6 +43,7 @@ extension LoginViewPresenterImp : LoginViewViewToPresenterDelegate{
 }
 
 extension LoginViewPresenterImp : LoginViewInteractotToPresenterDelegate{
+
     func didAuthenticated(loginDTO: LoginDTO) {
         self.didAuthenticatedHandler(loginDTO: loginDTO)
     }

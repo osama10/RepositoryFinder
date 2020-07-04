@@ -46,9 +46,6 @@ extension LoginViewInteractorImp : LoginViewPresenterToInteractorDelegate{
     func makeAuthentication(userName: String, password: String) {
         self.authenticateUser(userName: userName, password: password)
     }
-    
-    
-    
 }
 
 

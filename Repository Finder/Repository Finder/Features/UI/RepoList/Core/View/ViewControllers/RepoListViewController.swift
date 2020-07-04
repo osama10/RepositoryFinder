@@ -8,7 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
-class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable,KeyboarHideAbleView {
+class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndicatorViewable {
     
     @IBOutlet weak var searchViewContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
