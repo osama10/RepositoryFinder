@@ -18,5 +18,4 @@ class ShowMoreTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
         self.selectionStyle = .none
     }
 
-    
 }
