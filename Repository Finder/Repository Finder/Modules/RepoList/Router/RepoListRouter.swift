@@ -37,9 +37,3 @@ extension RepoListRouterImp : RepoListPresenterToRouterDelagate{
 }
 
 
-extension RepoListRouterImp : StoryboardInitializable {
-    static var storyboardName: UIStoryboard.Storyboard {
-        return .main
-    }
-}
-

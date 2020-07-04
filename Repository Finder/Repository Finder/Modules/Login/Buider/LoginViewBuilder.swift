@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol LoginViewBuilder {
-    func build(router : LoginViewPresenterToRouterDelegate)->UIViewController
+    func build(router : LoginViewPresenterToRouterDelegate) -> UIViewController
 }
 
 class LoginViewBuilderImp : LoginViewBuilder {
@@ -20,7 +20,7 @@ class LoginViewBuilderImp : LoginViewBuilder {
     var router : (LoginViewPresenterToRouterDelegate)!
     var interactor : (LoginViewInteractor & LoginViewPresenterToInteractorDelegate)!
     
-    func build(router : LoginViewPresenterToRouterDelegate)->UIViewController{
+    func build(router : LoginViewPresenterToRouterDelegate) -> UIViewController{
         registerView()
         registerInteractor()
         registerRouter(router: router)
@@ -35,7 +35,8 @@ class LoginViewBuilderImp : LoginViewBuilder {
     }
     
     private func registerView(){
-        self.view = LoginViewRouterImp.instantiateViewController() as! LoginViewController
+        let storyboard = UIStoryboard(storyboard: .main)
+        view = storyboard.initialViewController() as! LoginViewController
     }
     
     private func registerPresenter(){

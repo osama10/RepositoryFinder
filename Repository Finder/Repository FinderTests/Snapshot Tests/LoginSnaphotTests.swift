@@ -11,12 +11,7 @@ import FBSnapshotTestCase
 @testable import Repository_Finder
 
 class LoginSnaphotTests: FBSnapshotTestCase {
-
-
-
     func test_logingVC() throws {
         let mainStoryboard = UIStoryboard.storyboard(storyboard: .main)
     }
-
-
 }

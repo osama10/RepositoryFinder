@@ -40,8 +40,9 @@ class ForksListBuilderImp : ForksListBuilder{
     }
     
     private func registerView(){
-        let repoViewController = ForkListRouterImp.instantiateViewController() as! ForkListViewController
-        self.view = repoViewController
+        let storyboard = UIStoryboard(storyboard: .main)
+        let repoViewController: ForkListViewController = storyboard.instantiateViewController()
+        view = repoViewController
         
     }
     

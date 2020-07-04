@@ -20,7 +20,7 @@ class RepoListBuilderImp : RepoListBuilder{
     var view : (RepoListPresenterToViewDelegate & RepoListViewController )!
     var router : (RepoListPresenterToRouterDelagate)!
     
-    func build(with viewType : RepoListType, owner : Owner?)->UIViewController{
+    func build(with viewType : RepoListType, owner : Owner?) -> UIViewController {
        
         registrInteractor()
         registerView()
@@ -41,8 +41,9 @@ class RepoListBuilderImp : RepoListBuilder{
     }
     
     private func registerView(){
-        let repoViewController = RepoListRouterImp.instantiateViewController() as! RepoListViewController
-        self.view = repoViewController
+        let storyboard = UIStoryboard(storyboard: .main)
+        let repoViewController: RepoListViewController = storyboard.instantiateViewController()
+        view = repoViewController
         
     }
     

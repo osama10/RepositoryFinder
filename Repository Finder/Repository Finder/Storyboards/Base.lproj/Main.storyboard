@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tkd-Y3-k8E">
             <objects>
-                <viewController storyboardIdentifier="LoginViewRouterImp" id="T0w-Nb-lBR" customClass="LoginViewController" customModule="Repository_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="T0w-Nb-lBR" customClass="LoginViewController" customModule="Repository_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e6i-Or-QS1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +131,7 @@
         <!--Repo List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RepoListRouterImp" id="BYZ-38-t0r" customClass="RepoListViewController" customModule="Repository_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepoListViewController" id="BYZ-38-t0r" customClass="RepoListViewController" customModule="Repository_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

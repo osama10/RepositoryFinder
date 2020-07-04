@@ -15,14 +15,14 @@ protocol LoginViewRouter {
     func createView()->UIViewController
 }
 
-class LoginViewRouterImp : LoginViewRouter{
+class LoginViewRouterImp : LoginViewRouter {
     var navigationController: UINavigationController!
     var loginViewController: UIViewController!
     
     func createView() -> UIViewController {
         let loginViewBuilder : LoginViewBuilder = LoginViewBuilderImp()
-        self.loginViewController = loginViewBuilder.build(router: self)
-        return self.loginViewController
+        loginViewController = loginViewBuilder.build(router: self)
+        return loginViewController
     }
     
 }
@@ -38,8 +38,3 @@ extension LoginViewRouterImp : LoginViewPresenterToRouterDelegate{
     }
 }
 
-extension LoginViewRouterImp : StoryboardInitializable {
-    static var storyboardName: UIStoryboard.Storyboard {
-        return .main
-    }
-}
