@@ -51,7 +51,7 @@ class RepoListBuilderImp : RepoListBuilder{
 
     }
     private func registerRouter(repoViewController : UIViewController){
-        //self.router = RepoListRouterImp(repoListViewController: repoViewController)
+        router = RepoListRouterImp(repoListViewController: repoViewController)
     }
     
 }

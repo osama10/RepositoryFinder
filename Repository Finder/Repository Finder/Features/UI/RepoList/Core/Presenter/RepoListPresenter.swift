@@ -92,15 +92,7 @@ class RepoListPresenterImp : RepoListPresenter{
     }
 }
 
-extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
-    func viewDidLoad() {
-        if(viewType == .search){
-            self.defaultSettingForSearchFlow()
-        }else {
-            self.defaultSettingForUserFlow()
-        }
-    }
-    
+extension RepoListPresenterImp : RepoLisViewToPresenterDelegate {
     func search(queryString: String) {
         self.page = 1
         self.queryString = queryString
@@ -113,23 +105,7 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     func didTapOnRow(with index: Int) {
         self.didTapOnRowHandler(with: index)
     }
-    
-    func didTapOnDismissButton() {
-        self.router.dismissForkList()
-    }
-    
-    private func defaultSettingForSearchFlow(){
-        self.view.setNavBarButton(with: "Login")
-        
-    }
-    
-    private func defaultSettingForUserFlow(){
-        self.view.setNavBarButton(with: "Logout")
-        self.view.hideSearchBar()
-        self.view.startAnimatingLoader()
-        self.getUserRepositories()
-    }
-    
+
     private func didTapOnRowHandler(with index : Int){
         if(index == (self.repoListDTO?.repositories.count)!){
             self.showMoreRepositories()
@@ -150,10 +126,10 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate{
     }
     
     private func showMoreRepositories(){
-        if(viewType == .search){
-            self.showMoreSearchRepositories()
+        if(viewType == .search) {
+            showMoreSearchRepositories()
         }else{
-            self.showMoreUserRepositories()
+            showMoreUserRepositories()
         }
     }
     
@@ -180,7 +156,7 @@ extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{
         
         if(repoListDTO.isError){
             self.repositoriesFetchedErrorHandler(errorMessage: repoListDTO.errorMessage)
-        }else {
+        } else {
             self.repositoriesFetchedSuccessfullHandler(repoListDTO: repoListDTO)
         }
     }

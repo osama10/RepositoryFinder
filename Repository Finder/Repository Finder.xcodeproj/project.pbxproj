@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0336E13B24B243DF009FC15B /* AppStartup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336E13A24B243DF009FC15B /* AppStartup.swift */; };
 		035AE92424B0CC9A007E5775 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */; };
 		035AE92A24B0D28E007E5775 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92924B0D28E007E5775 /* UIColor+Extensions.swift */; };
 		035AE92C24B0D2B1007E5775 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92B24B0D2B1007E5775 /* UIView+Extensions.swift */; };
@@ -121,6 +122,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0336E13A24B243DF009FC15B /* AppStartup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartup.swift; sourceTree = "<group>"; };
 		035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
 		035AE92924B0D28E007E5775 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		035AE92B24B0D2B1007E5775 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				4AC16B6421BB8A390012B89B /* LaunchScreen.storyboard */,
 				4AC16B6721BB8A390012B89B /* Info.plist */,
 				4AC16B5B21BB8A360012B89B /* AppDelegate.swift */,
+				0336E13A24B243DF009FC15B /* AppStartup.swift */,
 			);
 			path = AppStartup;
 			sourceTree = "<group>";
@@ -1202,6 +1205,7 @@
 				4A86F34221BD94E3003B6CC2 /* ForkListInteractor.swift in Sources */,
 				4AC16B9921BB8FD40012B89B /* NetworkResult.swift in Sources */,
 				4AC16C0321BC1A950012B89B /* Utils.swift in Sources */,
+				0336E13B24B243DF009FC15B /* AppStartup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

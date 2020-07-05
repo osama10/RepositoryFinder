@@ -23,7 +23,6 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSettings()
-        presenter.viewDidLoad()
     }
     
     private func initialSettings(){
@@ -45,12 +44,7 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         imageView.image = image
         navigationItem.titleView = imageView
     }
-    
-    private func setNavigationBarButton(with title : String){
-        let dismissButton = UIBarButtonItem(title: title, style: .plain, target: self, action:#selector(dissmissVC))
-        self.navigationItem.leftBarButtonItem = dismissButton
-    }
-    
+
     private func setupTableView(){
         self.tableView.register(RepoListTableViewCell.self)
         self.tableView.register(ShowMoreTableViewCell.self)
@@ -77,13 +71,6 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         
         nothingFoundContainerView.addSubview(nothingFoundView)
     }
-    
-    
-    @objc func dissmissVC(){
-        self.presenter.didTapOnDismissButton()
-    }
-    
-   
 }
 
 extension RepoListViewController : UITextFieldDelegate{
@@ -159,7 +146,6 @@ extension RepoListViewController : RepoListPresenterToViewDelegate{
     }
     
     func setNavBarButton(with title: String) {
-        self.setNavigationBarButton(with: title)
     }
     
     func hideSearchBar() {

@@ -9,19 +9,13 @@
 import Foundation
 import UIKit
 
-protocol RepoListRouter  {
-    func createView() -> UIViewController
-}
+protocol RepoListRouter { var repoListViewController: UIViewController { get } }
 
 class RepoListRouterImp : RepoListRouter{
-    var navigationController: UINavigationController!
+    var repoListViewController: UIViewController
 
-    func createView() -> UIViewController {
-        let repoListBuilder : RepoListBuilder = RepoListBuilderImp()
-        let repoListViewController = repoListBuilder.build(with: .search, owner: .none)
-        navigationController = UINavigationController(rootViewController: repoListViewController)
-        navigationController.makeDefaultSettings()
-        return navigationController
+    init(repoListViewController: UIViewController) {
+        self.repoListViewController = repoListViewController
     }
 }
 
@@ -29,10 +23,6 @@ extension RepoListRouterImp : RepoListPresenterToRouterDelagate{
     func pushToForkScreen(repository: String, userName: String, totalForks: Int){
         let forkListBuilder : ForksListBuilder = ForksListBuilderImp()
         let forkListVC = forkListBuilder.build(repository: repository, userName: userName, totalForks: totalForks)
-        navigationController.pushViewController(forkListVC, animated: true)
-    }
-    
-    func dismissForkList() {
-        navigationController.popViewController(animated: true)
+        repoListViewController.navigationController?.pushViewController(forkListVC, animated: true)
     }
 }

@@ -69,6 +69,7 @@ extension ForkListViewController : UITableViewDataSource, UITableViewDelegate{
 }
 
 extension ForkListViewController : ForkListPresenterToViewDelegate{
+
     func reloadData() {
         self.tableView.reloadData()
     }
@@ -85,7 +86,6 @@ extension ForkListViewController : ForkListPresenterToViewDelegate{
     func showErrorAlert(with title: String, message: String) {
         self.showAlert(with: title, and: message)
     }
-    
     
 }
 

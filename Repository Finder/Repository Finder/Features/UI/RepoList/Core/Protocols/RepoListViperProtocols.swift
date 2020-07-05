@@ -9,10 +9,8 @@
 import Foundation
 
 protocol RepoLisViewToPresenterDelegate : class{
-    func viewDidLoad()
     func search(queryString : String)
     func didTapOnRow(with index : Int)
-    func didTapOnDismissButton()
 }
 
 protocol RepoListPresenterToViewDelegate : class{
@@ -22,8 +20,6 @@ protocol RepoListPresenterToViewDelegate : class{
     func stopAnimatingLoader()
     func showNoResultFoundAlert()
     func showErrorAlert(with title : String, message : String)
-    func setNavBarButton(with title : String)
-    func hideSearchBar()
 }
 
 protocol RepoListPresenterToInteractorDelegate : class {
@@ -33,7 +29,6 @@ protocol RepoListPresenterToInteractorDelegate : class {
 
 protocol RepoListPresenterToRouterDelagate : class{
     func pushToForkScreen(repository : String, userName : String, totalForks : Int)
-    func dismissForkList()
 }
 
 protocol RepoListInteractorToPresenterDelegate : class{
