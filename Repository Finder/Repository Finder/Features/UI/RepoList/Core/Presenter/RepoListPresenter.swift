@@ -14,7 +14,6 @@ protocol RepoListPresenter {
     var interactor : RepoListPresenterToInteractorDelegate!{ get set }
     var router : RepoListPresenterToRouterDelagate!{ get set}
     
-    var viewType : RepoListType{ get }
     var repoListDTO : RepoListDTO? { get set }
     var owner : Owner?{ get }
     var totalRepositories : Int{ get }
@@ -25,7 +24,6 @@ protocol RepoListPresenter {
     func willShowMore()->Bool
     func getRepository(at index : Int)->Repository
     
-    
 }
 
 class RepoListPresenterImp : RepoListPresenter{
@@ -35,7 +33,6 @@ class RepoListPresenterImp : RepoListPresenter{
     var router: RepoListPresenterToRouterDelagate!
     
     var owner: Owner?
-    var viewType: RepoListType
     var repoListDTO: RepoListDTO?
     
     var page: Int = 1
@@ -47,11 +44,9 @@ class RepoListPresenterImp : RepoListPresenter{
         return repoListDTO.repositories.count
     }
     
-    init(view : RepoListPresenterToViewDelegate ,viewType : RepoListType , owner : Owner? = nil) {
+    init(view : RepoListPresenterToViewDelegate) {
         self.view = view
         self.repoListDTO = nil
-        self.viewType = viewType
-        self.owner = owner
     }
     
     func numberOfRows(section: Int) -> Int {
@@ -126,23 +121,11 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate {
     }
     
     private func showMoreRepositories(){
-        if(viewType == .search) {
-            showMoreSearchRepositories()
-        }else{
-            showMoreUserRepositories()
-        }
-    }
-    
-    private func showMoreSearchRepositories(){
         self.page = self.page + 1
         self.view.startAnimatingLoader()
         self.getSearchRespositories(queryString: self.queryString, page: self.page, perPageNumber: self.perPageNumber)
     }
-    
-    private func showMoreUserRepositories(){
-        self.view.startAnimatingLoader()
-        self.getUserRepositories()
-    }
+
 }
 
 extension RepoListPresenterImp : RepoListInteractorToPresenterDelegate{

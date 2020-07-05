@@ -13,7 +13,7 @@ final class AppStartup {
 
     class func start() -> UIViewController {
         let builder: RepoListBuilder = RepoListBuilderImp()
-        let rootViewController = builder.build(with: .search, owner: .none)
+        let rootViewController = builder.build()
         AppStartup.navigationController = UINavigationController(rootViewController: rootViewController)
         AppStartup
             .navigationController.makeDefaultSettings()
