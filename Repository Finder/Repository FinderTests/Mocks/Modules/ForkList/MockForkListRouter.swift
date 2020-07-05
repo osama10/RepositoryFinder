@@ -10,5 +10,7 @@ import Foundation
 @testable import Repository_Finder
 
 class MockForkListRouter : ForkListPresenterToRouterDelagate{
-    
+    func pushToRouterScreen(owner: Owner) {
+
+    }
 }

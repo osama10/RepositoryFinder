@@ -10,17 +10,11 @@ import Foundation
 @testable import Repository_Finder
 
 class MockRepoListRouter : RepoListPresenterToRouterDelagate{
-   
     var pushToForkScreenCalled = false
-    var dismissForkListCalled = false
-    
-    func pushToForkScreen(repository: String, userName: String, totalForks: Int) {
+
+    func pushToForkScreen(repository: String, owner: Owner, totalForks: Int) {
         self.pushToForkScreenCalled = true
+
     }
-    
-    func dismissForkList() {
-        self.dismissForkListCalled = true
-    }
-    
-    
+
 }

@@ -14,7 +14,7 @@ class ForkListPresenterTests: XCTestCase {
     var presenter : ForkListPresenter!
     override func setUp() {
         super.setUp()
-        presenter = ForkListPresenterImp(view: MockForkListView(), userName: "osama", repoName: "osama", totalForks: 21)
+        presenter = ForkListPresenterImp(view: MockForkListView(), owner: OwnerStubs.fakeOwner, repoName: "osama", totalForks: 21)
     }
     
     override func tearDown() {
@@ -37,7 +37,7 @@ class ForkListPresenterTests: XCTestCase {
     
     func testView(){
         let view = MockForkListView()
-        presenter = ForkListPresenterImp(view: view, userName: "osama", repoName: "osama", totalForks: 21)
+        presenter = ForkListPresenterImp(view: view, owner: OwnerStubs.fakeOwner, repoName: "osama", totalForks: 21)
         presenter.view.reloadData()
         presenter.view.showErrorAlert(with: "error", message: "error")
         presenter.view.startAnimatingLoader()

@@ -35,7 +35,6 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         self.nothingFoundContainerView.isHidden = true
         self.hideKeyboardWhenTappedAround()
         self.searchView.searchTextField.delegate = self
-        
     }
     
     private func setLogo(){

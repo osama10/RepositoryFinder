@@ -28,7 +28,6 @@ class RepoListPresenterTests: XCTestCase {
         presenter.view.hideSearchBar()
         presenter.view.reloadData()
         presenter.view.scrollTableViewToTop()
-        presenter.view.setNavBarButton(with: "title")
         presenter.view.showErrorAlert(with: "error", message: "error")
         presenter.view.showNoResultFoundAlert()
         presenter.view.startAnimatingLoader()
@@ -37,7 +36,6 @@ class RepoListPresenterTests: XCTestCase {
         XCTAssert(view.hideSearchBarCalled == true, "View test failed")
         XCTAssert(view.reoloadDataCalled == true, "View test failed")
         XCTAssert(view.tableViewToTop == true, "View test failed")
-        XCTAssert(view.navBarTitle == "title", "View test failed")
         XCTAssert(view.title == "error", "View test failed")
         XCTAssert(view.message == "error", "View test failed")
         XCTAssert(view.noResultFoundCalled == true, "View test failed")
@@ -50,11 +48,7 @@ class RepoListPresenterTests: XCTestCase {
     func testRouter(){
         let router = MockRepoListRouter()
         presenter.router = router
-        
-        presenter.router.dismissForkList()
-        presenter.router.pushToForkScreen(repository: "repo", userName: "osama", totalForks: 30)
-        
-        XCTAssert(router.dismissForkListCalled == true , "Router Test Failed")
+        presenter.router.pushToForkScreen(repository: "repo", owner: OwnerStubs.fakeOwner, totalForks: 30)
         XCTAssert(router.pushToForkScreenCalled == true , "Router Test Failed")
 
     }

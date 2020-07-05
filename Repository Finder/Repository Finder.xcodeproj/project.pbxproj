@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0336E13B24B243DF009FC15B /* AppStartup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336E13A24B243DF009FC15B /* AppStartup.swift */; };
+		0336E13E24B2666C009FC15B /* OwnerStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336E13D24B2666C009FC15B /* OwnerStubs.swift */; };
 		035AE92424B0CC9A007E5775 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */; };
 		035AE92A24B0D28E007E5775 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92924B0D28E007E5775 /* UIColor+Extensions.swift */; };
 		035AE92C24B0D2B1007E5775 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AE92B24B0D2B1007E5775 /* UIView+Extensions.swift */; };
@@ -54,12 +55,6 @@
 		4A86F37221BE8A76003B6CC2 /* LoginServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37121BE8A76003B6CC2 /* LoginServiceImp.swift */; };
 		4A86F37421BE95BF003B6CC2 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37321BE95BF003B6CC2 /* LoginDTO.swift */; };
 		4A86F37821BEB85E003B6CC2 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37721BEB85E003B6CC2 /* MockNetworkManager.swift */; };
-		4A86F37C21BEBB65003B6CC2 /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */; };
-		4A86F37E21BEBD12003B6CC2 /* MockLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */; };
-		4A86F38021BEBDA9003B6CC2 /* MockLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */; };
-		4A86F38221BEBE19003B6CC2 /* MockLoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */; };
-		4A86F38821BEBF39003B6CC2 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */; };
-		4A86F38A21BEC6CB003B6CC2 /* LoginViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */; };
 		4A86F38D21BEC7EC003B6CC2 /* MockLoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38C21BEC7EC003B6CC2 /* MockLoginServices.swift */; };
 		4A86F39021BECB5E003B6CC2 /* MockForkListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F38F21BECB5E003B6CC2 /* MockForkListServices.swift */; };
 		4A86F39221BECD37003B6CC2 /* MockRepoListServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F39121BECD37003B6CC2 /* MockRepoListServices.swift */; };
@@ -123,6 +118,7 @@
 
 /* Begin PBXFileReference section */
 		0336E13A24B243DF009FC15B /* AppStartup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartup.swift; sourceTree = "<group>"; };
+		0336E13D24B2666C009FC15B /* OwnerStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerStubs.swift; sourceTree = "<group>"; };
 		035AE92324B0CC9A007E5775 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
 		035AE92924B0D28E007E5775 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		035AE92B24B0D2B1007E5775 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -170,12 +166,6 @@
 		4A86F37121BE8A76003B6CC2 /* LoginServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceImp.swift; sourceTree = "<group>"; };
 		4A86F37321BE95BF003B6CC2 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		4A86F37721BEB85E003B6CC2 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
-		4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
-		4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginPresenter.swift; sourceTree = "<group>"; };
-		4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginInteractor.swift; sourceTree = "<group>"; };
-		4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginViewRouter.swift; sourceTree = "<group>"; };
-		4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
-		4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorTests.swift; sourceTree = "<group>"; };
 		4A86F38C21BEC7EC003B6CC2 /* MockLoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginServices.swift; sourceTree = "<group>"; };
 		4A86F38F21BECB5E003B6CC2 /* MockForkListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForkListServices.swift; sourceTree = "<group>"; };
 		4A86F39121BECD37003B6CC2 /* MockRepoListServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListServices.swift; sourceTree = "<group>"; };
@@ -276,6 +266,14 @@
 				4AC16C1621BC37350012B89B /* NothingFoundView.swift */,
 			);
 			path = NothingFoundView;
+			sourceTree = "<group>";
+		};
+		0336E13C24B265F3009FC15B /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0336E13D24B2666C009FC15B /* OwnerStubs.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		035AE92524B0D0BF007E5775 /* AppStartup */ = {
@@ -660,20 +658,8 @@
 			children = (
 				4A86F3A121BED88F003B6CC2 /* RepoList */,
 				4A86F39321BECE78003B6CC2 /* ForkList */,
-				4A86F37A21BEBB47003B6CC2 /* Login */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		4A86F37A21BEBB47003B6CC2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F37B21BEBB65003B6CC2 /* MockLoginView.swift */,
-				4A86F37D21BEBD12003B6CC2 /* MockLoginPresenter.swift */,
-				4A86F37F21BEBDA9003B6CC2 /* MockLoginInteractor.swift */,
-				4A86F38121BEBE19003B6CC2 /* MockLoginViewRouter.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		4A86F38321BEBEE8003B6CC2 /* Tests */ = {
@@ -681,18 +667,8 @@
 			children = (
 				4A86F3A021BED87F003B6CC2 /* RepoList */,
 				4A86F38E21BECA79003B6CC2 /* ForkList */,
-				4A86F38421BEBEF2003B6CC2 /* Login */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		4A86F38421BEBEF2003B6CC2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F38721BEBF39003B6CC2 /* LoginViewPresenterTests.swift */,
-				4A86F38921BEC6CB003B6CC2 /* LoginViewInteractorTests.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		4A86F38B21BEC7CE003B6CC2 /* Services */ = {
@@ -779,6 +755,7 @@
 		4AC16B6F21BB8A390012B89B /* Repository FinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				0336E13C24B265F3009FC15B /* Stubs */,
 				4A86F38321BEBEE8003B6CC2 /* Tests */,
 				4A86F37521BEB72A003B6CC2 /* Mocks */,
 				4AC16B7221BB8A390012B89B /* Info.plist */,
@@ -1213,7 +1190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A86F37C21BEBB65003B6CC2 /* MockLoginView.swift in Sources */,
 				4A86F39221BECD37003B6CC2 /* MockRepoListServices.swift in Sources */,
 				4A86F3AB21BEDC49003B6CC2 /* RepoListPresenterTests.swift in Sources */,
 				4A86F39F21BED6E4003B6CC2 /* ForkListInteractorTests.swift in Sources */,
@@ -1221,18 +1197,14 @@
 				4A86F3AD21BEE34A003B6CC2 /* RepoListInteractorTests.swift in Sources */,
 				4A86F3A921BEDB57003B6CC2 /* MockRepoListPresenter.swift in Sources */,
 				4A86F3A321BED8AB003B6CC2 /* MockRepoListView.swift in Sources */,
-				4A86F38221BEBE19003B6CC2 /* MockLoginViewRouter.swift in Sources */,
-				4A86F38821BEBF39003B6CC2 /* LoginViewPresenterTests.swift in Sources */,
 				4A86F39721BECFB6003B6CC2 /* MockForkListView.swift in Sources */,
 				4A86F39021BECB5E003B6CC2 /* MockForkListServices.swift in Sources */,
-				4A86F38A21BEC6CB003B6CC2 /* LoginViewInteractorTests.swift in Sources */,
 				4A86F39D21BED465003B6CC2 /* ForkListPresenterTests.swift in Sources */,
 				4A86F39921BED386003B6CC2 /* MockForkListInteractor.swift in Sources */,
+				0336E13E24B2666C009FC15B /* OwnerStubs.swift in Sources */,
 				4A86F3A721BEDAB7003B6CC2 /* MockRepoListRouter.swift in Sources */,
-				4A86F38021BEBDA9003B6CC2 /* MockLoginInteractor.swift in Sources */,
 				4A86F38D21BEC7EC003B6CC2 /* MockLoginServices.swift in Sources */,
 				4A86F3A521BED9F8003B6CC2 /* MockRepoListInteractor.swift in Sources */,
-				4A86F37E21BEBD12003B6CC2 /* MockLoginPresenter.swift in Sources */,
 				4A86F39B21BED3FC003B6CC2 /* MockForkListRouter.swift in Sources */,
 				4A86F37821BEB85E003B6CC2 /* MockNetworkManager.swift in Sources */,
 			);
