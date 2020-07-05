@@ -16,6 +16,7 @@ protocol RepoListPresenter {
     
     var repoListDTO : RepoListDTO? { get set }
     var owner : Owner?{ get }
+    var viewType: RepoListType { get }
     var totalRepositories : Int{ get }
     var perPageNumber : Int { get }
     var page : Int { get }
@@ -33,6 +34,7 @@ class RepoListPresenterImp : RepoListPresenter{
     var router: RepoListPresenterToRouterDelagate!
     
     var owner: Owner?
+    var viewType: RepoListType
     var repoListDTO: RepoListDTO?
     
     var page: Int = 1
@@ -44,9 +46,11 @@ class RepoListPresenterImp : RepoListPresenter{
         return repoListDTO.repositories.count
     }
     
-    init(view : RepoListPresenterToViewDelegate) {
+    init(view : RepoListPresenterToViewDelegate, viewType: RepoListType, owner: Owner? = nil) {
         self.view = view
         self.repoListDTO = nil
+        self.viewType = viewType
+        self.owner = owner
     }
     
     func numberOfRows(section: Int) -> Int {
@@ -54,8 +58,8 @@ class RepoListPresenterImp : RepoListPresenter{
         guard let repoListDTO = self.repoListDTO else {
             return rowCount
         }
+
         if(section == 0){
-            
             rowCount = (repoListDTO.showMore) ? repoListDTO.repositories.count + 1: repoListDTO.repositories.count
         }
         
@@ -69,9 +73,8 @@ class RepoListPresenterImp : RepoListPresenter{
     
     func getRepository(at index: Int) -> Repository {
         return repoListDTO!.repositories[index]
-        
     }
-    
+
     private func getUserRepositories(){
         guard let userName = owner?.login else {
             self.view.showErrorAlert(with: "Error", message:somethingUnexpectedError )
@@ -79,7 +82,6 @@ class RepoListPresenterImp : RepoListPresenter{
         }
         self.interactor.fetchUserRepositories(userName:userName, page: self.page, perPageNumber: self.perPageNumber, totalRepo: owner?.publicRepos ?? 0)
         self.page = self.page + 1
-        
     }
     
     private func getSearchRespositories(queryString : String, page : Int, perPageNumber : Int){
@@ -88,6 +90,15 @@ class RepoListPresenterImp : RepoListPresenter{
 }
 
 extension RepoListPresenterImp : RepoLisViewToPresenterDelegate {
+
+    func viewDidLoad() {
+        if viewType == .user {
+            view.hideSearchBar()
+            view.startAnimatingLoader()
+            getUserRepositories()
+        }
+    }
+
     func search(queryString: String) {
         self.page = 1
         self.queryString = queryString
@@ -112,11 +123,14 @@ extension RepoListPresenterImp : RepoLisViewToPresenterDelegate {
     private func showrForksViewHandler(of index : Int){
         let numberOfForks = self.repoListDTO?.repositories[index].forks ?? 0
         if(numberOfForks > 0){
-            let userName = self.repoListDTO?.repositories[index].owner?.login ?? ""
+            guard let owner = self.repoListDTO?.repositories[index].owner else {
+                view.showErrorAlert(with: "Error", message: somethingUnexpectedError)
+                return
+            }
             let repoName = self.repoListDTO?.repositories[index].name ?? ""
-            self.router.pushToForkScreen(repository: repoName, userName: userName, totalForks: numberOfForks)
+            self.router.pushToForkScreen(repository: repoName, owner: owner, totalForks: numberOfForks)
         }else{
-            self.view.showErrorAlert(with: noForksMessage, message: "")
+            view.showErrorAlert(with: noForksMessage, message: "")
         }
     }
     

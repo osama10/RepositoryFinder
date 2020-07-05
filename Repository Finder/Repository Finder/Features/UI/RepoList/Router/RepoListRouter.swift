@@ -20,9 +20,9 @@ class RepoListRouterImp : RepoListRouter{
 }
 
 extension RepoListRouterImp : RepoListPresenterToRouterDelagate{
-    func pushToForkScreen(repository: String, userName: String, totalForks: Int){
+    func pushToForkScreen(repository: String, owner: Owner, totalForks: Int){
         let forkListBuilder : ForksListBuilder = ForksListBuilderImp()
-        let forkListVC = forkListBuilder.build(repository: repository, userName: userName, totalForks: totalForks)
+        let forkListVC = forkListBuilder.build(repository: repository, owner: owner, totalForks: totalForks)
         repoListViewController.navigationController?.pushViewController(forkListVC, animated: true)
     }
 }

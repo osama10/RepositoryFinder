@@ -22,7 +22,8 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initialSettings()
+        initialSettings()
+        presenter.viewDidLoad()
     }
     
     private func initialSettings(){
@@ -78,8 +79,6 @@ extension RepoListViewController : UITextFieldDelegate{
     self.view.endEditing(true)
     return false
     }
-    
-    
 }
 
 extension RepoListViewController : UITableViewDelegate, UITableViewDataSource{
@@ -145,9 +144,6 @@ extension RepoListViewController : RepoListPresenterToViewDelegate{
         self.showAlert(with: title, and: message)
     }
     
-    func setNavBarButton(with title: String) {
-    }
-    
     func hideSearchBar() {
         self.searchViewContainerView.isHidden = true
         self.searchViewHeightConstraint.constant = 0
@@ -159,6 +155,5 @@ extension RepoListViewController : SearchViewDelegate{
     func didTapOnSearchButton(searchString: String) {
         self.nothingFoundContainerView.isHidden = true
         presenter.search(queryString: searchString)
-        
     }
 }

@@ -12,7 +12,7 @@ import UIKit
 
 protocol ForkListViewToPresenterDelegate : class{
     func viewDidLoad()
-    func didTapOnRow(with index : Int)
+    func didTapOnRow(of section:Int, at index: Int)
 }
 
 protocol ForkListPresenterToViewDelegate : class{
@@ -26,7 +26,8 @@ protocol ForkListPresenterToInteractorDelegate : class {
     func fetchForksList(userName: String, repoName: String, page: Int, perPageNumber: Int, totalForks : Int)
 }
 
-protocol ForkListPresenterToRouterDelagate : class{
+protocol ForkListPresenterToRouterDelagate : class {
+    func pushToRouterScreen(owner: Owner)
 }
 
 protocol ForkListInteractorToPresenterDelegate : class{

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol RepoListBuilder {
-    func build() -> UIViewController
+    func build(viewType: RepoListType, owner: Owner?) -> UIViewController
 }
 
 class RepoListBuilderImp : RepoListBuilder{
@@ -20,11 +20,11 @@ class RepoListBuilderImp : RepoListBuilder{
     var view : (RepoListPresenterToViewDelegate & RepoListViewController )!
     var router : (RepoListPresenterToRouterDelagate)!
     
-    func build() -> UIViewController{
+    func build(viewType: RepoListType, owner: Owner?) -> UIViewController {
        
         registrInteractor()
         registerView()
-        registerPresenter()
+        registerPresenter(viewType: viewType, owner: owner)
         registerRouter(repoViewController: self.view)
         
         view.presenter = presenter
@@ -46,8 +46,8 @@ class RepoListBuilderImp : RepoListBuilder{
         
     }
     
-    private func registerPresenter(){
-        self.presenter = RepoListPresenterImp(view: view)
+    private func registerPresenter(viewType: RepoListType, owner: Owner?){
+        self.presenter = RepoListPresenterImp(view: view, viewType: viewType, owner: owner)
 
     }
     private func registerRouter(repoViewController : UIViewController){

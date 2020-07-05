@@ -9,11 +9,12 @@
 import UIKit
 
 final class AppStartup {
+
     static var navigationController: UINavigationController!
 
     class func start() -> UIViewController {
         let builder: RepoListBuilder = RepoListBuilderImp()
-        let rootViewController = builder.build()
+        let rootViewController = builder.build(viewType: .search, owner: nil)
         AppStartup.navigationController = UINavigationController(rootViewController: rootViewController)
         AppStartup
             .navigationController.makeDefaultSettings()

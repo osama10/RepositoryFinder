@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ForksListBuilder {
-     func build(repository: String, userName: String, totalForks: Int)->UIViewController
+     func build(repository: String, owner: Owner, totalForks: Int)->UIViewController
 }
 
 class ForksListBuilderImp : ForksListBuilder{
@@ -19,11 +19,11 @@ class ForksListBuilderImp : ForksListBuilder{
     var view : (ForkListPresenterToViewDelegate & ForkListViewController )!
     var router : (ForkListPresenterToRouterDelagate)!
     
-    func build(repository: String, userName: String, totalForks: Int)->UIViewController{
+    func build(repository: String, owner: Owner, totalForks: Int)->UIViewController{
         
         registrInteractor()
         registerView()
-        registerPresenter(repository: repository, userName: userName, totalForks: totalForks)
+        registerPresenter(repository: repository, owner: owner, totalForks: totalForks)
         registerRouter()
         
         self.view.presenter = presenter
@@ -45,11 +45,11 @@ class ForksListBuilderImp : ForksListBuilder{
         
     }
     
-    private func registerPresenter(repository: String, userName: String, totalForks: Int){
-        self.presenter = ForkListPresenterImp(view: self.view, userName: userName, repoName: repository, totalForks: totalForks)
+    private func registerPresenter(repository: String, owner: Owner, totalForks: Int){
+        self.presenter = ForkListPresenterImp(view: self.view, owner: owner, repoName: repository, totalForks: totalForks)
         
     }
     private func registerRouter(){
-        self.router  = ForkListRouterImp()
+        self.router  = ForkListRouterImp(forkViewController: view)
     }
 }

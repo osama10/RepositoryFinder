@@ -36,30 +36,39 @@ class ForkListViewController: UIViewController, AlertsPresentable, NVActivityInd
 }
 
 extension ForkListViewController : UITableViewDataSource, UITableViewDelegate{
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.sections
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter.title(for: section)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.numberOfRows(section: section)
+        return presenter.numberOfRows(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return self.getCell(of : tableView,  at: indexPath)
+        return getCell(of : tableView, at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.presenter.heightForRow(at: indexPath.row).toCGFloat
+        return presenter.heightForRow(at: indexPath.row).toCGFloat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.didTapOnRow(with: indexPath.row)
+        presenter.didTapOnRow(of: indexPath.section, at:indexPath.row)
     }
     
     private func getCell(of tableView : UITableView , at indexPath : IndexPath)->UITableViewCell{
         var cell : UITableViewCell!
-        if(indexPath.row == self.presenter.numberOfForks){
+        if(indexPath.row == presenter.numberOfForks){
             let showMoreCell = tableView.dequeResuseableCell(for: indexPath) as ShowMoreTableViewCell
             cell = showMoreCell
         }else {
             let forkListCell = tableView.dequeResuseableCell(for: indexPath) as ForkListTableViewCell
-            forkListCell.setData(owner: self.presenter.getOwner(at: indexPath.row))
+            forkListCell.setData(owner: presenter.getOwner(of: indexPath.section, at: indexPath.row))
             cell = forkListCell
         }
         
@@ -71,20 +80,19 @@ extension ForkListViewController : UITableViewDataSource, UITableViewDelegate{
 extension ForkListViewController : ForkListPresenterToViewDelegate{
 
     func reloadData() {
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func startAnimatingLoader() {
-        self.startAnimating()
+        startAnimating()
     }
     
     func stopAnimatingLoader() {
-        self.stopAnimating()
+        stopAnimating()
     }
     
-    
     func showErrorAlert(with title: String, message: String) {
-        self.showAlert(with: title, and: message)
+        showAlert(with: title, and: message)
     }
     
 }
