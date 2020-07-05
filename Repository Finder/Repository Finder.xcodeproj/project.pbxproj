@@ -47,12 +47,6 @@
 		4A86F34421BD9C6D003B6CC2 /* ForkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34321BD9C6D003B6CC2 /* ForkListPresenter.swift */; };
 		4A86F34921BE3B3D003B6CC2 /* RepoListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34821BE3B3D003B6CC2 /* RepoListBuilder.swift */; };
 		4A86F34D21BE462D003B6CC2 /* ForksListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */; };
-		4A86F35521BE56CD003B6CC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F35421BE56CD003B6CC2 /* LoginViewController.swift */; };
-		4A86F35821BE5828003B6CC2 /* LoginViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F35721BE5828003B6CC2 /* LoginViewProtocols.swift */; };
-		4A86F35B21BE66A7003B6CC2 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F35A21BE66A7003B6CC2 /* LoginViewPresenter.swift */; };
-		4A86F35E21BE6868003B6CC2 /* LoginViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F35D21BE6868003B6CC2 /* LoginViewInteractor.swift */; };
-		4A86F36121BE6882003B6CC2 /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36021BE6882003B6CC2 /* LoginViewRouter.swift */; };
-		4A86F36321BE6AF8003B6CC2 /* LoginViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36221BE6AF8003B6CC2 /* LoginViewBuilder.swift */; };
 		4A86F36921BE866C003B6CC2 /* LoginEnpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36821BE866C003B6CC2 /* LoginEnpointProvider.swift */; };
 		4A86F36B21BE867B003B6CC2 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36A21BE867B003B6CC2 /* LoginRequest.swift */; };
 		4A86F37021BE89C0003B6CC2 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86F36F21BE89C0003B6CC2 /* LoginServices.swift */; };
@@ -168,12 +162,6 @@
 		4A86F34321BD9C6D003B6CC2 /* ForkListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkListPresenter.swift; sourceTree = "<group>"; };
 		4A86F34821BE3B3D003B6CC2 /* RepoListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListBuilder.swift; sourceTree = "<group>"; };
 		4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksListBuilder.swift; sourceTree = "<group>"; };
-		4A86F35421BE56CD003B6CC2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4A86F35721BE5828003B6CC2 /* LoginViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocols.swift; sourceTree = "<group>"; };
-		4A86F35A21BE66A7003B6CC2 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
-		4A86F35D21BE6868003B6CC2 /* LoginViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractor.swift; sourceTree = "<group>"; };
-		4A86F36021BE6882003B6CC2 /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
-		4A86F36221BE6AF8003B6CC2 /* LoginViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewBuilder.swift; sourceTree = "<group>"; };
 		4A86F36821BE866C003B6CC2 /* LoginEnpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnpointProvider.swift; sourceTree = "<group>"; };
 		4A86F36A21BE867B003B6CC2 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		4A86F36F21BE89C0003B6CC2 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
@@ -331,7 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				4AC16B5F21BB8A360012B89B /* Main.storyboard */,
-				4A86F34521BE0219003B6CC2 /* Login */,
 				4AC16C0721BC24430012B89B /* ForksList */,
 				4AC16BF321BC08E80012B89B /* RepoList */,
 			);
@@ -550,16 +537,6 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		4A86F34521BE0219003B6CC2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35121BE568F003B6CC2 /* Router */,
-				4A86F35021BE5689003B6CC2 /* Builder */,
-				4A86F34F21BE5678003B6CC2 /* Core */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		4A86F34621BE3AD4003B6CC2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,73 +574,6 @@
 				4A86F34C21BE462D003B6CC2 /* ForksListBuilder.swift */,
 			);
 			path = Builder;
-			sourceTree = "<group>";
-		};
-		4A86F34F21BE5678003B6CC2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35C21BE6850003B6CC2 /* Interactor */,
-				4A86F35921BE6697003B6CC2 /* Presenter */,
-				4A86F35621BE5807003B6CC2 /* Protocols */,
-				4A86F35221BE56AC003B6CC2 /* View */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		4A86F35021BE5689003B6CC2 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F36221BE6AF8003B6CC2 /* LoginViewBuilder.swift */,
-			);
-			path = Builder;
-			sourceTree = "<group>";
-		};
-		4A86F35121BE568F003B6CC2 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F36021BE6882003B6CC2 /* LoginViewRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		4A86F35221BE56AC003B6CC2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35321BE56B1003B6CC2 /* ViewController */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A86F35321BE56B1003B6CC2 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35421BE56CD003B6CC2 /* LoginViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4A86F35621BE5807003B6CC2 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35721BE5828003B6CC2 /* LoginViewProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		4A86F35921BE6697003B6CC2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35A21BE66A7003B6CC2 /* LoginViewPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		4A86F35C21BE6850003B6CC2 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				4A86F35D21BE6868003B6CC2 /* LoginViewInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		4A86F36421BE8617003B6CC2 /* LoginEndpointProvider */ = {
@@ -1228,7 +1138,6 @@
 				4A86F33921BD8946003B6CC2 /* ForkListServicesImp.swift in Sources */,
 				4AC16B5E21BB8A360012B89B /* RepoListViewController.swift in Sources */,
 				4AC16B8821BB8E5F0012B89B /* EmptyDTO.swift in Sources */,
-				4A86F36321BE6AF8003B6CC2 /* LoginViewBuilder.swift in Sources */,
 				4AC16B9121BB8F140012B89B /* BaseURL.swift in Sources */,
 				035AE93624B0D3B6007E5775 /* UIImageView+Extensions.swift in Sources */,
 				035AE93E24B0D52F007E5775 /* String+Extensions.swift in Sources */,
@@ -1250,7 +1159,6 @@
 				4A86F30E21BC601D003B6CC2 /* RepoListServiceImp.swift in Sources */,
 				4A86F32B21BD83F9003B6CC2 /* ForkListDTO.swift in Sources */,
 				4AC16BA521BB97880012B89B /* HTTPMethods.swift in Sources */,
-				4A86F35B21BE66A7003B6CC2 /* LoginViewPresenter.swift in Sources */,
 				035AE92424B0CC9A007E5775 /* Storyboard+Extensions.swift in Sources */,
 				4A86F33221BD86A7003B6CC2 /* ForkListEndpointProvider.swift in Sources */,
 				4A86F33421BD8880003B6CC2 /* ForkListServices.swift in Sources */,
@@ -1266,7 +1174,6 @@
 				035AE93A24B0D4D8007E5775 /* Int+Extensions.swift in Sources */,
 				4A86F31F21BD252A003B6CC2 /* RepoListDTO.swift in Sources */,
 				035AE92C24B0D2B1007E5775 /* UIView+Extensions.swift in Sources */,
-				4A86F35E21BE6868003B6CC2 /* LoginViewInteractor.swift in Sources */,
 				4AC16B5C21BB8A360012B89B /* AppDelegate.swift in Sources */,
 				4A86F31C21BD1A21003B6CC2 /* RepoListUserEndProvider.swift in Sources */,
 				4AC16B7F21BB8D5B0012B89B /* Constants.swift in Sources */,
@@ -1279,9 +1186,6 @@
 				4AC16B9521BB8F7B0012B89B /* NetworkError.swift in Sources */,
 				4AC16C1421BC2BE10012B89B /* ForkListTableViewCell.swift in Sources */,
 				4A86F30221BC5393003B6CC2 /* RepoListSearchEndpointProvider.swift in Sources */,
-				4A86F35821BE5828003B6CC2 /* LoginViewProtocols.swift in Sources */,
-				4A86F35521BE56CD003B6CC2 /* LoginViewController.swift in Sources */,
-				4A86F36121BE6882003B6CC2 /* LoginViewRouter.swift in Sources */,
 				4A86F31421BCF4D9003B6CC2 /* RepoListViperProtocols.swift in Sources */,
 				4A86F37221BE8A76003B6CC2 /* LoginServiceImp.swift in Sources */,
 				4A86F32621BD7E6A003B6CC2 /* ForkListRouter.swift in Sources */,
