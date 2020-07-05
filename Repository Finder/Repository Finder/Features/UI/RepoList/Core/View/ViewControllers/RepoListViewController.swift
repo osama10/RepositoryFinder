@@ -50,7 +50,7 @@ class RepoListViewController: UIViewController,AlertsPresentable, NVActivityIndi
         self.tableView.register(ShowMoreTableViewCell.self)
         self.tableView.setdelegateAndDatasource(for: self)
         self.tableView.estimatedRowHeight = 200
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupSearchView(){

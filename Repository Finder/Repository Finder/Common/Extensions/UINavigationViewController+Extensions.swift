@@ -13,7 +13,7 @@ extension UINavigationController {
         self.navigationBar.barTintColor = .black
         self.navigationBar.backgroundColor = .black
         self.navigationBar.tintColor = .white
-        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationBar.titleTextAttributes = textAttributes
     }
 }
